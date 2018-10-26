@@ -2040,7 +2040,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #54f0e5;
+  background: #ffdf52;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3465,21 +3465,6 @@ p.description {
 code.description {
   padding: 1px 1px 1px 1px;
   margin: 0px 1px 0px 4px;
-}
-img.img-topic {
-  width: 100%;
-}
-.post-sticky-flag {
-  font-size: inherit;
-  float: left;
-  color: #000;
-  cursor: help;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
-}
-.post-sticky-flag:hover {
-  color: #07b39b;
 }
 .sidebar {
   position: fixed;
