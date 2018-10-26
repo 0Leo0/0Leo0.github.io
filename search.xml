@@ -1,47 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title>markdown语法学习范文</title>
-      <link href="/Markdown%20grammar.html"/>
-      <url>/Markdown%20grammar.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p class="description"></p><p>&lt;img src=”<a href="https://s1.ax1x.com/2018/10/26/i639gK.jpg&quot;" target="_blank" rel="noopener">https://s1.ax1x.com/2018/10/26/i639gK.jpg&quot;</a> alt=”i639gK” style=”width:100% /&gt;</p><a id="more"></a><p>##</p><p>## </p><p>## </p><hr>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[markdown语法学习范文]]></title>
+    <url>%2FMarkdown%20grammar.html</url>
+    <content type="text"><![CDATA[## ## ##]]></content>
       <categories>
-          
-          <category> markdown </category>
-          
+        <category>markdown</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> markdown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0.html"/>
-      <url>/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css">]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 无 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-  
-  
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0.html</url>
+    <content type="text"><![CDATA[]]></content>
+      <tags>
+        <tag>无</tag>
+      </tags>
+  </entry>
 </search>
