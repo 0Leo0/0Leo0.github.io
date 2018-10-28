@@ -108,7 +108,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2018/10/28/icvBAs.png">
 <meta property="og:image" content="https://s1.ax1x.com/2018/10/28/icvw7j.png">
 <meta property="og:image" content="https://s1.ax1x.com/2018/10/28/icvdBQ.png">
-<meta property="og:updated_time" content="2018-10-28T09:27:17.864Z">
+<meta property="og:updated_time" content="2018-10-28T09:32:46.577Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git学习之路_1_安装git以及创建版本库">
 <meta name="twitter:description" content="开启git学习之路">
@@ -429,7 +429,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  852
+                  855
                 </span>
               
 
@@ -491,8 +491,8 @@ git config --global user.email &quot;your email&quot;
 <p>让我们来新建一个readme.txt文件，输入下面的内容，<br><img src="https://s1.ax1x.com/2018/10/28/icvw7j.png" alt="readme.txt"></p>
 <p><strong>注意</strong>：这个文件一定要放在init的目录(或者子目录也行)下(否则git不能管理)，接着，把这个文件放到git仓库中只需要两步即可。</p>
 <ol>
-<li>用<code>git add</code>告诉Git，把该文件添加到仓库中<br> git add readme.txt </li>
-<li>用<code>git commit</code>告诉Git，把文件提交到仓库中<br> git commit -m “wrote a readme file”</li>
+<li>用<code>git add</code>告诉Git，把该文件添加到仓库中 <figure class="highlight plain"><figcaption><span>add readme.txt``` </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2. 用`git commit`告诉Git，把文件提交到仓库中</span><br><span class="line">	```git commit -m &quot;wrote a readme file&quot;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <p>上述命令的<code>-m</code>表示本次提交的说明(comment),可以输入任何内容，有意义最好，这样你就可以从历史记录里面方便地找到改动的记录。<br><img src="https://s1.ax1x.com/2018/10/28/icvdBQ.png" alt="提交"></p>
 <p>在执行完<code>git commit</code>命令之后，就会告诉你，<font color="red">1 file changed</font>:1个文件被改动(我们添加了readme.txt)；<font color="red">2 insertions</font>：插入了两行内容(readme.txt有两行内容)</p>
