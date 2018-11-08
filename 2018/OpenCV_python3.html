@@ -107,7 +107,7 @@
 <meta property="og:image" content="https://i.imgur.com/wUmgT2H.png">
 <meta property="og:image" content="https://i.imgur.com/JO02dxm.png">
 <meta property="og:image" content="https://i.imgur.com/whM20GA.png">
-<meta property="og:updated_time" content="2018-11-08T12:23:43.973Z">
+<meta property="og:updated_time" content="2018-11-08T12:48:15.901Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenCV_python3_01">
 <meta name="twitter:description" content="第一个代码">
@@ -428,7 +428,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  659
+                  693
                 </span>
               
 
@@ -444,7 +444,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -503,7 +503,7 @@ cv2.waitKey(0)
 <p><img src="https://i.imgur.com/JO02dxm.png" alt=""></p>
 <p>停止脚本程序很简单，就如前面所说的，在显示的图片的任意地方按键盘上的任意键即可。然后查看脚本目录，你可以看到一个newimage.jpg的图片</p>
 <p><img src="https://i.imgur.com/whM20GA.png" alt=""></p>
-<p><strong>完成的代码</strong></p>
+<p><strong>完整的代码</strong></p>
 <pre><code>from __future__ import print_function
 import argparse
 import cv2 
@@ -529,6 +529,11 @@ cv2.imwrite(&quot;newimage.jpg&quot;,image)
 <div class="note danger no-icon"><p>danger no-icon</p></div>
 
 <p>在上面的代码中，height对应于shape[0]，width对应于shape[1]。也就是Numpy 的shape似乎和自己想的不一样(specifying the height before the width)。但是，就matrix definition而言，这实际上是有意义。因为当我们定义矩阵的时候，我们通常将它们写成(# of rows x # of columns)的形式。这里，我们的图片有height：400 pixels(the number of rows) 以及 width：400 pixels(the number of columns).</p>
+<h3 id="更多的参考："><a href="#更多的参考：" class="headerlink" title="更多的参考："></a>更多的参考：</h3><p><a href="https://ppao.pyimagesearch.com/lessons/ppao-chapter-3-loading-displaying-and-saving/" target="_blank" rel="noopener">loading-displaying-and-saving</a></p>
+<p><a href="https://www.pyimagesearch.com/2014/06/02/opencv-load-image/" target="_blank" rel="noopener">How-To: OpenCV Load an Image</a></p>
+<p><a href="https://www.cyberciti.biz/faq/python-command-line-arguments-argv-example/" target="_blank" rel="noopener">Python Command Line Arguments</a></p>
+<p><a href="https://www.pyimagesearch.com/2014/11/03/display-matplotlib-rgb-image/" target="_blank" rel="noopener">How to Display a Matplotlib RGB Image</a></p>
+<p><a href="https://www.pyimagesearch.com/2015/08/24/resolved-matplotlib-figures-not-showing-up-or-displaying/" target="_blank" rel="noopener">Resolved: Matplotlib figures not showing up or displaying</a></p>
 <hr>
 
 
@@ -858,7 +863,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Practical-Python-and-OpenCV-3rd-Edition-01"><span class="nav-number">1.</span> <span class="nav-text">Practical Python and OpenCV,3rd Edition 01</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#load、display、save"><span class="nav-number">1.1.</span> <span class="nav-text">load、display、save</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Practical-Python-and-OpenCV-3rd-Edition-01"><span class="nav-number">1.</span> <span class="nav-text">Practical Python and OpenCV,3rd Edition 01</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#load、display、save"><span class="nav-number">1.1.</span> <span class="nav-text">load、display、save</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更多的参考："><span class="nav-number">1.2.</span> <span class="nav-text">更多的参考：</span></a></li></ol></li></ol></div>
             
 
           </div>
