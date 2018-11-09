@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="imread,imshow,waitKey,imwrite,">
+  <meta name="keywords" content="Oepncv Python3,">
 
 
 
@@ -96,22 +96,22 @@
 
 
 
-<meta name="description" content="第一个代码">
-<meta name="keywords" content="imread,imshow,waitKey,imwrite">
+<meta name="description" content="第二个代码">
+<meta name="keywords" content="Oepncv Python3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OpenCV_python3_01">
 <meta property="og:url" content="https://0Leo0.github.io/2018/OpenCV_python3.html">
 <meta property="og:site_name" content="Lovelife">
-<meta property="og:description" content="第一个代码">
+<meta property="og:description" content="第二个代码">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.imgur.com/wUmgT2H.png">
-<meta property="og:image" content="https://i.imgur.com/JO02dxm.png">
-<meta property="og:image" content="https://i.imgur.com/whM20GA.png">
-<meta property="og:updated_time" content="2018-11-08T12:48:15.901Z">
+<meta property="og:image" content="https://i.imgur.com/CIsf7wW.png">
+<meta property="og:image" content="https://i.imgur.com/cdnBl5U.png">
+<meta property="og:image" content="https://i.imgur.com/61ClxZk.png">
+<meta property="og:updated_time" content="2018-11-09T03:37:13.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenCV_python3_01">
-<meta name="twitter:description" content="第一个代码">
-<meta name="twitter:image" content="https://i.imgur.com/wUmgT2H.png">
+<meta name="twitter:description" content="第二个代码">
+<meta name="twitter:image" content="https://i.imgur.com/CIsf7wW.png">
 
 
 
@@ -428,7 +428,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  693
+                  1.4k
                 </span>
               
 
@@ -444,7 +444,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  5
                 </span>
               
             </div>
@@ -452,7 +452,7 @@
 
           
               <div class="post-description">
-                  第一个代码
+                  第二个代码
               </div>
           
 
@@ -473,36 +473,59 @@
 
 
 <a id="more"></a>
-<h2 id="Practical-Python-and-OpenCV-3rd-Edition-01"><a href="#Practical-Python-and-OpenCV-3rd-Edition-01" class="headerlink" title="Practical Python and OpenCV,3rd Edition 01"></a>Practical Python and OpenCV,3rd Edition 01</h2><hr>
-<h3 id="load、display、save"><a href="#load、display、save" class="headerlink" title="load、display、save"></a>load、display、save</h3><pre><code>from __future__ import print_function
+<h2 id="Practical-Python-and-OpenCV-3rd-Edition-02"><a href="#Practical-Python-and-OpenCV-3rd-Edition-02" class="headerlink" title="Practical Python and OpenCV,3rd Edition 02"></a>Practical Python and OpenCV,3rd Edition 02</h2><hr>
+<h3 id="基础说明"><a href="#基础说明" class="headerlink" title="基础说明"></a>基础说明</h3><h4 id="什么是像素"><a href="#什么是像素" class="headerlink" title="什么是像素"></a>什么是像素</h4><p>每个图像都由一组像素组成。 像素是图像的原始构建块。没有比像素更小的单位了。</p>
+<p>通常，我们将像素视为出现在图像中给定位置的光的“颜色”或“强度”。</p>
+<p>如果我们将图像视为网格，则网格中的每个方块都包含一个像素。</p>
+<p>例如，假设我们有一个分辨率为500×300的图像。这意味着我们的图像表示为像素网格，有500行和300列。总体而言，我们的图像总共有 500×300 = 150,000像素。</p>
+<p>大多数像素以两种方式表示：灰度(grayscale)和彩色(color)。在灰度图像中，每个像素具有0到255之间的值，其中0对应于“黑色”而255对应于“白色”。 0到255之间的值是不同的灰色阴影，其中，接近0的更加的darker，接近于255更加的lighter。</p>
+<p>彩色通常以RGB颜色空间表示，one value for the Red component,one for Green,and one for Blue。</p>
+<p>RGB中的每一种都由0到255范围内的整数表示，这表示颜色的“多少”。像素值只需要在[0,255]范围内，我们通常使用8位无符号整数来表示每种颜色强度。</p>
+<p>然后，我们将这些值组合成图形中的RGB(红色，绿色，蓝色）元组(tuple)。 这个元组就代表我们的颜色。</p>
+<p>为了构建一个白色，我们将完全填充每个红色，绿色和蓝色 buckets，如下所示:(255,255,255）。为了创建一个黑色，我们将每个bucket都清空：(0,0,0) ，为了创造一种纯红色，我们将完全填满红色的bucket：(255,0,0）。</p>
+<h4 id="coordinate-system-坐标系统"><a href="#coordinate-system-坐标系统" class="headerlink" title="coordinate system(坐标系统)"></a>coordinate system(坐标系统)</h4><p>如上所述，图像表示为像素网格。 想象一下我们的网格作为一张方格纸。 使用该方格纸，点(0,0）对应于图像的左上角。 当我们向下和向右移动时，x和y值都会增加。(Python语言是零索引的，这意味着我们总是从零开始计数。)，看下图：</p>
+<center><img src="https://i.imgur.com/CIsf7wW.png" alt=""></center>
+
+<center>字母“I”放在一张图纸上.像素是通过他们的(x，y）坐标访问的，我们向右走x列，向下走y行(因为x是横坐标，y是纵坐标)，记住Python是零索引的：我们从零而不是一开始计数。</center>
+
+
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code>from __future__ import print_function
 import argparse
 import cv2 
-</code></pre><p><strong>解释</strong>：</p>
-<p>  从<strong>future</strong> package中导入print_function，是因为我们将使用实际的print() function，而不是print statement，这样我们的代码就可以在python2.7以及python3中共同运行。</p>
-<pre><code>ap = argparse.ArgumentParser()
-ap.add_argument(&apos;-i&apos;,&quot;--image&quot;,required=True,
-    help=&quot;Path to the image&quot;)
-args = vars(ap.parse_args())
-</code></pre><p><strong>解释</strong>：</p>
-<p>  使用“–image”参数，也就是我们图像在磁盘的路径，我们将这个路径进行parse，然后将他们存储在一个字典中。</p>
-<pre><code>image = cv2.imread(args[&quot;image&quot;])
-print(&quot;height: {} pixels&quot;.format(image.shape[0]))
-print(&quot;width : {} pixels&quot;.format(image.shape[1]))
-print(&quot;channels : {}&quot;.format(image.shape[2]))
 
-cv2.imshow(&quot;Image&quot;,image)
+ap = argparse.ArgumentParser()
+ap.add_argument(&apos;-i&apos;,&quot;--image&quot;,required=True,
+        help=&quot;Path to the image&quot;)
+args = vars(ap.parse_args())
+
+image = cv2.imread(args[&quot;image&quot;])
+cv2.imshow(&quot;Original&quot;,image)
+</code></pre><p>请记住，OpenCV将图像表示为NumPy数组。概念上，我们可以将此表示视为一个矩阵。为了访问像素值，我们只需要提供我们感兴趣的像素的x和y坐标。但是，重要的是要注意<strong>OpenCV以相反的顺序存储RGB channels。 虽然我们通常用Red，Green和Blue(RGB)来思考，但OpenCV实际上按Blue，Green和Red的顺序存储它们(BGR)。</strong>如下面的代码：</p>
+<pre><code>(b,g,r) = image[0,0]
+print(&quot;Pixel at (0,0) - Red:{}, Green： {}， Blue: {}&quot;.format(
+    r,g,b))
+
+image[0,0] = (0,0,255)
+(b,g,r) = image[0,0]
+print(&quot;Pixel at (0,0) - Red: {} , Green: {}, Blue: {}&quot;.format(r,
+    g,b))
+</code></pre><p><strong>解释</strong>：</p>
+<p>我们首先抓取图像的左上角的像素，即(0,0)的位置。 这个像素表示为元组.同时，OpenCV以相反的顺序存储RGB像素，因此当我们解包并访问元组中的每个元素时，我们实际上是以BGR顺序查看它们。然后我们将像素RGB颜色打印出来。</p>
+<p>接下来，我们操纵图像中的左上角像素，该像素位于坐标（0,0）处，并将其设置为(0,0,255)。 如果我们以RGB格式读取这个像素值，我们的红色值为0，绿色值为0，蓝色值为255，因此使其成为纯蓝色。但是，正如我上面提到的，在使用OpenCV时我们需要特别注意。 我们的像素实际上以BGR格式存储，而不是RGB格式。我们实际上将这个像素读为255为红色，0为绿色，0为蓝色，使其成为红色，而不是蓝色。</p>
+<pre><code>corner = image[0:100,0:100]
+cv2.imshow(&quot;Corner&quot;,corner)
+
+image[0:100,0:100] = (0,255,0)
+
+cv2.imshow(&quot;Updated&quot;,image)
 cv2.waitKey(0)
 </code></pre><p><strong>解释</strong>：</p>
-<p>  cv2.imread函数将返回一个Numpy数据，代表着图像。对于Numpy数组，我们可以使用shape属性来获取图像的width、height以及channels的数量。imshow函数将我们的图像显示在Windows窗口中，它的第一个参数是”name” of our window.第二个参数是我们从磁盘加载的图像了。而waitKey函数会暂停我们的脚本程序，直到我们在键盘上按下一个key之后才继续执行，而参数0则表示我们按键盘上的任意键都可以继续执行脚本程序。</p>
-<pre><code>cv2.imwrite(&quot;newimage.jpg&quot;,image)
-</code></pre><p><strong>解释</strong>：</p>
-<p>  最后我们使用imwrite函数将我们的保存为jpg格式的图像，第一个参数是我们要保存的图像的路径名，第二个是我们希望保存的图像。</p>
-<p>最后执行脚本程序：</p>
-<p><img src="https://i.imgur.com/wUmgT2H.png" alt=""></p>
-<p>显示效果图片</p>
-<p><img src="https://i.imgur.com/JO02dxm.png" alt=""></p>
-<p>停止脚本程序很简单，就如前面所说的，在显示的图片的任意地方按键盘上的任意键即可。然后查看脚本目录，你可以看到一个newimage.jpg的图片</p>
-<p><img src="https://i.imgur.com/whM20GA.png" alt=""></p>
+<p>接下来我们使用NumPy的数组切片功能来访问图像的较大矩形部分。为了访问图像较大的部分，Numpy希望我们提供四个索引值，分别是Start y,End y,Start x以及End x。 </p>
+<p>最后，运行程序即可。</p>
+<p><img src="https://i.imgur.com/cdnBl5U.png" alt=""></p>
+<p>效果图：</p>
+<p><img src="https://i.imgur.com/61ClxZk.png" alt=""></p>
+<p>点击图片部分，按键盘任意键结束脚本。</p>
 <p><strong>完整的代码</strong></p>
 <pre><code>from __future__ import print_function
 import argparse
@@ -510,30 +533,36 @@ import cv2
 
 ap = argparse.ArgumentParser()
 ap.add_argument(&apos;-i&apos;,&quot;--image&quot;,required=True,
-    help=&quot;Path to the image&quot;)
+        help=&quot;Path to the image&quot;)
 args = vars(ap.parse_args())
 
 image = cv2.imread(args[&quot;image&quot;])
-print(&quot;height: {} pixels&quot;.format(image.shape[0]))
-print(&quot;width : {} pixels&quot;.format(image.shape[1]))
-print(&quot;channels : {}&quot;.format(image.shape[2]))
+cv2.imshow(&quot;Original&quot;,image)
 
-cv2.imshow(&quot;Image&quot;,image)
+(b,g,r) = image[0,0]
+print(&quot;Pixel at (0,0) - Red:{}, Green： {}， Blue: {}&quot;.format(
+    r,g,b))
+
+image[0,0] = (0,0,255)
+(b,g,r) = image[0,0]
+print(&quot;Pixel at (0,0) - Red: {} , Green: {}, Blue: {}&quot;.format(r,
+    g,b))
+
+corner = image[0:100,0:100]
+cv2.imshow(&quot;Corner&quot;,corner)
+
+image[0:100,0:100] = (0,255,0)
+
+cv2.imshow(&quot;Updated&quot;,image)
 cv2.waitKey(0)
-cv2.imwrite(&quot;newimage.jpg&quot;,image)
 </code></pre><p><strong>用到的函数</strong></p>
 <p><span id="inline-blue">imread</span></p>
 <p><span id="inline-blue">imshow</span></p>
 <p><span id="inline-blue">waitKey</span></p>
-<p><span id="inline-blue">imwrite</span></p>
-<div class="note danger no-icon"><p>danger no-icon</p></div>
-
-<p>在上面的代码中，height对应于shape[0]，width对应于shape[1]。也就是Numpy 的shape似乎和自己想的不一样(specifying the height before the width)。但是，就matrix definition而言，这实际上是有意义。因为当我们定义矩阵的时候，我们通常将它们写成(# of rows x # of columns)的形式。这里，我们的图片有height：400 pixels(the number of rows) 以及 width：400 pixels(the number of columns).</p>
-<h3 id="更多的参考："><a href="#更多的参考：" class="headerlink" title="更多的参考："></a>更多的参考：</h3><p><a href="https://ppao.pyimagesearch.com/lessons/ppao-chapter-3-loading-displaying-and-saving/" target="_blank" rel="noopener">loading-displaying-and-saving</a></p>
-<p><a href="https://www.pyimagesearch.com/2014/06/02/opencv-load-image/" target="_blank" rel="noopener">How-To: OpenCV Load an Image</a></p>
-<p><a href="https://www.cyberciti.biz/faq/python-command-line-arguments-argv-example/" target="_blank" rel="noopener">Python Command Line Arguments</a></p>
-<p><a href="https://www.pyimagesearch.com/2014/11/03/display-matplotlib-rgb-image/" target="_blank" rel="noopener">How to Display a Matplotlib RGB Image</a></p>
-<p><a href="https://www.pyimagesearch.com/2015/08/24/resolved-matplotlib-figures-not-showing-up-or-displaying/" target="_blank" rel="noopener">Resolved: Matplotlib figures not showing up or displaying</a></p>
+<h3 id="更多的参考："><a href="#更多的参考：" class="headerlink" title="更多的参考："></a>更多的参考：</h3><p><a href="https://ppao.pyimagesearch.com/lessons/ppao-chapter-4-image-basics/" target="_blank" rel="noopener">chapter-4-image-basics</a></p>
+<p><a href="https://www.learnopencv.com/why-does-opencv-use-bgr-color-format/" target="_blank" rel="noopener">why-does-opencv-use-bgr-color-format</a></p>
+<p>总结起来就是：</p>
+<p>有一些技术原因，但总的来说，为什么开发人员选择BGR格式的原因是因为在BGR中指定颜色值而不是RGB在当时更受欢迎 - 这就是全部。</p>
 <hr>
 
 
@@ -602,7 +631,7 @@ cv2.imwrite(&quot;newimage.jpg&quot;,image)
       
         <div class="post-tags">
           
-            <a href="/tags/imread-imshow-waitKey-imwrite/" <i="" class="fa fa-tag"> imread,imshow,waitKey,imwrite</a>
+            <a href="/tags/Oepncv-Python3/" <i="" class="fa fa-tag"> Oepncv Python3</a>
           
         </div>
       
@@ -614,6 +643,11 @@ cv2.imwrite(&quot;newimage.jpg&quot;,image)
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+	        <a href="/2018/OpenCV_python3.html" rel="prev" title="OpenCV_python3_01">
+
+	          <i class="fa fa-chevron-left"></i> OpenCV_python3_01
+              </a>
             
           </div>
 
@@ -718,7 +752,7 @@ cv2.imwrite(&quot;newimage.jpg&quot;,image)
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -740,7 +774,7 @@ cv2.imwrite(&quot;newimage.jpg&quot;,image)
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -863,7 +897,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Practical-Python-and-OpenCV-3rd-Edition-01"><span class="nav-number">1.</span> <span class="nav-text">Practical Python and OpenCV,3rd Edition 01</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#load、display、save"><span class="nav-number">1.1.</span> <span class="nav-text">load、display、save</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更多的参考："><span class="nav-number">1.2.</span> <span class="nav-text">更多的参考：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Practical-Python-and-OpenCV-3rd-Edition-02"><span class="nav-number">1.</span> <span class="nav-text">Practical Python and OpenCV,3rd Edition 02</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基础说明"><span class="nav-number">1.1.</span> <span class="nav-text">基础说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是像素"><span class="nav-number">1.1.1.</span> <span class="nav-text">什么是像素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#coordinate-system-坐标系统"><span class="nav-number">1.1.2.</span> <span class="nav-text">coordinate system(坐标系统)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">1.2.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更多的参考："><span class="nav-number">1.3.</span> <span class="nav-text">更多的参考：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -933,7 +967,7 @@ show_date_time();
 
 <div class="theme-info">
 <div class="powered-by"></div>
-<span class="post-count">博客全站共3.8k字</span>
+<span class="post-count">博客全站共5.2k字</span>
 </div>
 
         
