@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="Opencv,">
+  <meta name="keywords" content="case study,">
 
 
 
@@ -96,22 +96,18 @@
 
 
 
-<meta name="description" content="第八个代码">
-<meta name="keywords" content="Opencv">
+<meta name="keywords" content="case study">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenCV_python3_08">
-<meta property="og:url" content="https://0Leo0.github.io/2018/OpenCV_python3_08.html">
+<meta property="og:title" content="case study_webcam face detection">
+<meta property="og:url" content="https://0Leo0.github.io/2018/case_study_02.html">
 <meta property="og:site_name" content="Lovelife">
-<meta property="og:description" content="第八个代码">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.imgur.com/NYAxEld.png">
-<meta property="og:image" content="https://i.imgur.com/cLscQGR.png">
-<meta property="og:image" content="https://i.imgur.com/KJ2y1Wi.png">
-<meta property="og:updated_time" content="2018-11-22T03:17:21.750Z">
+<meta property="og:image" content="https://i.imgur.com/S3PoGOb.png">
+<meta property="og:image" content="https://i.imgur.com/W9DSULB.png">
+<meta property="og:updated_time" content="2018-11-27T04:39:22.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OpenCV_python3_08">
-<meta name="twitter:description" content="第八个代码">
-<meta name="twitter:image" content="https://i.imgur.com/NYAxEld.png">
+<meta name="twitter:title" content="case study_webcam face detection">
+<meta name="twitter:image" content="https://i.imgur.com/S3PoGOb.png">
 
 
 
@@ -141,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="https://0Leo0.github.io/2018/OpenCV_python3_08.html">
+  <link rel="canonical" href="https://0Leo0.github.io/2018/case_study_02.html">
 
 
 
@@ -163,7 +159,7 @@
 
 
 
-  <title>OpenCV_python3_08 | Lovelife</title>
+  <title>case study_webcam face detection | Lovelife</title>
   
 
 
@@ -345,7 +341,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://0Leo0.github.io/2018/OpenCV_python3_08.html">
+    <link itemprop="mainEntityOfPage" href="https://0Leo0.github.io/2018/case_study_02.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Leowen">
@@ -362,7 +358,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">OpenCV_python3_08</h1>
+          <h1 class="post-title" itemprop="name headline">case study_webcam face detection</h1>
         
 
         <div class="post-meta">
@@ -374,8 +370,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T21:17:50+08:00">
-                2018-11-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-27T10:17:50+08:00">
+                2018-11-27
               </time>
             
 
@@ -428,7 +424,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  752
+                  1.3k
                 </span>
               
 
@@ -444,16 +440,12 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  5
                 </span>
               
             </div>
           
 
-          
-              <div class="post-description">
-                  第八个代码
-              </div>
           
 
         </div>
@@ -473,61 +465,92 @@
 
 
 <a id="more"></a>
-<h2 id="Practical-Python-and-OpenCV-3rd-Edition-08"><a href="#Practical-Python-and-OpenCV-3rd-Edition-08" class="headerlink" title="Practical Python and OpenCV,3rd Edition 08"></a>Practical Python and OpenCV,3rd Edition 08</h2><hr>
-<h3 id="拆分和合并通道-splitting-and-merging-channels"><a href="#拆分和合并通道-splitting-and-merging-channels" class="headerlink" title="拆分和合并通道(splitting and merging channels)"></a>拆分和合并通道(splitting and merging channels)</h3><p>彩色图像由多个通道组成：红色，绿色和蓝色成分。我们已经看到我们可以通过索引到NumPy数组来访问这些成分。但是，如果我们想将图像分割成各自的成分呢？</p>
-<p>我们将使用cv2.split函数。如下图所示，我们有下面一个图像，</p>
-<p><img src="https://i.imgur.com/NYAxEld.png" alt=""></p>
-<p>这张图片非常的蓝，编写代码，实现通道的提取</p>
-<p>新建一个splitting_and_merging.py</p>
-<pre><code>import numpy as np 
+<h2 id="Webcam-face-detection"><a href="#Webcam-face-detection" class="headerlink" title="Webcam face detection"></a>Webcam face detection</h2><hr>
+<pre><code>from preprocess import FaceDetector
+from preprocess import imutils 
 import argparse
 import cv2 
 
-# Construct the argument parser and parse the arguments
+# construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument(&apos;-i&apos;,&quot;--image&quot;,required=True,
-    help=&quot;path to the image&quot;)
+ap.add_argument(&quot;-f&quot;, &quot;--face&quot;, required = True,
+    help = &quot;path to where the face cascade resides&quot;)
+ap.add_argument(&quot;-v&quot;, &quot;--video&quot;,
+    help = &quot;path to the (optional) video file&quot;)
 args = vars(ap.parse_args())
-</code></pre><p>上面读取输入参数。</p>
-<pre><code># Load the image and grab each channel: Red, Green, and Blue
-# NOTE: OpenCV stores an image as NumPy array with its
-# channels in reverse order! When we call cv2.split, we are
-# actually getting the channels as Blue, Green, Red!
-image = cv2.imread(args[&quot;image&quot;])
-(B,G,R) = cv2.split(image)
 
-# Show each channel individually
-cv2.imshow(&quot;Red&quot;,R)
-cv2.imshow(&quot;Green&quot;,G)
-cv2.imshow(&quot;Blue&quot;,B)
-cv2.waitKey(0)
+# construct the face detector
+fd = FaceDetector(args[&quot;face&quot;])
+</code></pre><p>这里出现了一个新的包，<code>imutils</code>，这个包主要包含用于执行基本图像操作的便捷功能，例如调整大小。前面我们已经实现了<code>imutils</code>这个包了，如果没看的话，那么我们直接安装这个包也是可以的。执行<code>pip install imutils</code>就可以了，然后直接导入这个包即可(<code>import imutils</code>)。</p>
+<p>我们同样需要一个haar级联分类器才能找到图像中的脸部。分类器被序列化为XML文件，可以由OpenCV加载。我们的face参数指向磁盘上的序列化XML级联分类器。</p>
+<p>出于调试目的(或者系统没有网络摄像头)，我们创建了一个可选的命令行参数–video，它指向磁盘上的视频文件。为了防止无法使用网络摄像头，使用视频文件测试和调试他的实时系统仍然是一件好事。在这种情况下，我们只需要提供我们的视频文件目录给video参数即可。</p>
+<p>最后我们通过传递cascade classifier的路径实例化我们的FaceDetector。</p>
+<pre><code># if a video path was not supplied, grab the reference
+# to the gray
+if not args.get(&quot;video&quot;):
+    camera = cv2.VideoCapture(0)
+else:
+    camera = cv2.VideoCapture(args[&quot;video&quot;])
+</code></pre><p>如果我们未提供视频路径。在这种情况下，OpenCV将尝试从笔记本电脑的内置(或USB)网络摄像头读取视频。否则，OpenCV将打开video参数指向的视频文件。</p>
+<p>在任何一种情况下，都使用<code>cv2.VideoCapture</code>函数。提供整数值0指示OpenCV从网络摄像头设备读取，而提供字符串表示OpenCV应打开路径指向的视频。提供无效路径将导致空指针，如果没有有效的视频文件，我们显然无法进行任何面部检测。</p>
+<p>假设抓取对视频的引用成功，我们将此指针存储在camera变量中。</p>
+<pre><code># keep looping
+while True:
+    # grab the current frame
+    (grabbed,frame) = camera.read()
 
-# Merge the image back together again
-merged = cv2.merge([B,G,R])
-cv2.imshow(&quot;Merged&quot;,merged)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-</code></pre><p>通常，我们会想到RGB颜色空间中的图像——首先是红色，第二个是绿色，第三个是蓝色。但是，OpenCV以反向通道顺序将RGB图像存储为NumPy阵列。 它不是以RGB顺序存储图像，而是以BGR顺序存储图像; 因此我们以相反的顺序解包元组。然后将每个通道的图像显示出来。最后我们再将各个通道的图像合并成原图。</p>
-<p>显示图像：</p>
-<p><img src="https://i.imgur.com/cLscQGR.png" alt=""></p>
-<p>红色通道非常暗。这是有道理的，因为海洋场景中的红色很少。存在的红色要么非常暗，要么没有代表，要么非常light，并且可能是波浪崩溃时白色泡沫的一部分。</p>
-<p>绿色通道在图像中更具代表性，因为海水确实包含绿色色调。</p>
-<p>最后，蓝色通道非常light，在某些位置接近纯白色。这是因为我们的图像中大量呈现蓝色阴影。</p>
-<pre><code># Now, let&apos;s visualize each channel in color
-zeros = np.zeros(image.shape[:2],dtype=&quot;uint8&quot;)
-cv2.imshow(&quot;Red&quot;,cv2.merge([zeros,zeros,R]))
-cv2.imshow(&quot;Green&quot;,cv2.merge([zeros,G,zeros]))
-cv2.imshow(&quot;Blue&quot;,cv2.merge([B,zeros,zeros]))
-cv2.waitKey(0)
-</code></pre><p>显示效果：</p>
-<p><img src="https://i.imgur.com/KJ2y1Wi.png" alt=""></p>
-<p>上面代码可以看到另一种可视化图像通道的方法。为了显示通道的实际“颜色”，我们首先需要使用cv2.split拆分图像。然后，我们需要重新构建图像，但这次设置所有像素，但当前通道为零。</p>
-<p>我们首先构造了一个零的NumPy数组，其宽度和高度与原始图像相同。然后，为了构造图像的红色通道表示，我们调用cv2.merge，但为绿色和蓝色通道指定我们的零数组。后面采取类似的方法。</p>
-<p><strong>用到的函数</strong></p>
-<p><span id="inline-blue">cv2.split</span></p>
-<p><span id="inline-blue">cv2.merge</span></p>
-<p><span id="inline-blue">cv2.destroyAllWindows</span></p>
-<h3 id="更多的参考："><a href="#更多的参考：" class="headerlink" title="更多的参考："></a>更多的参考：</h3><p><a href="https://ppao.pyimagesearch.com/lessons/ppao-chapter-6-image-processing/" target="_blank" rel="noopener">PPaO Chapter 6 – Image Processing</a></p>
+    # if we are viewing a video and we did not grab a
+    # frame, then we have reached the end of the video
+    if args.get(&quot;video&quot;) and not grabbed:
+        break 
+
+    # resize the frame and convert it to grayscale
+    frame = imutils.resize(frame,width=300)
+    gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
+</code></pre><p>下一步是开始循环视频中的所有帧 在最基本的层面上，视频只是放在一起的一系列图像，这意味着我们实际上可以一次读取这些帧。我们首先用while循环将保持循环遍历帧，直到满足以下两种情况之一：(1)视频已到达其结束且没有更多帧，或(2)用户过早地停止执行脚本。</p>
+<p>在while循环里，我们首先通过调用相机的read()方法抓取视频中的下一帧。read方法返回两个值的元组：第一个是抓取的，用布尔值表示读取帧是否成功的true或false，第二个就是抓取的帧本身。</p>
+<p>如果我们正在从文件中读取视频，但是并没有抓取到帧，则说明视频结束，这个时候应该用break退出循环。</p>
+<p>否则，我们对帧进行一些预处理。首先就是调整帧的大小，使其宽度为300像素，以便更快地实时进行人脸检测。然后将帧转换为灰度。</p>
+<pre><code>    # detect faces in the image and then clone the frame
+    # so that we can draw on it
+    faceRects = fd.detect(gray,scaleFactor=1.1,minNeighbors=5,
+        minSize=(30,30))
+    frameClone = frame.copy()
+
+    # loop over the face bounding boxes and draw them
+    for (fX,fY,fW,fH) in faceRects:
+        cv2.rectangle(frameClone,(fX,fY),(fX + fW,fY + fH),(0,255,0),2)
+
+    # show our detected faces
+    cv2.imshow(&quot;Face&quot;,frameClone)
+
+    # if the &apos;q&apos; key is pressed, stop the loop
+    if cv2.waitKey(1) &amp; 0xFF == ord(&quot;q&quot;):
+        break 
+
+# cleanup the camera and close any open windows 
+camera.release()
+cv2.destroyAllWindows() 
+</code></pre><p>我们首先传递了灰度帧并应用了<code>FaceDetecto</code>r的<code>detect</code>方法。</p>
+<p>但是为了在我们的图像上绘制一个边界框，我们决定首先创建一个框架的克隆，以防万一我们需要原始框架进行进一步的预处理。帧的克隆存储在frameClone中。</p>
+<p>然后我们遍历图像中面部的边界框，并使用<code>cv2.rectangle</code>函数绘制它们。然后显示我们的结果。</p>
+<p>当然，用户可能希望停止执行脚本。我们不用强制输入ctrl+c，而是检查用户是否在键盘上按了q键。</p>
+<p>最后，我们release了对相机的引用，并且关闭了由OpenCV创建的任何打开的窗口。</p>
+<p>执行脚本文件</p>
+<p>提供video视频文件：</p>
+<pre><code>python cam.py --face cascades\haarcascade_frontalface_default.xml --video video\myvideo.mp4
+</code></pre><p>不提供video文件</p>
+<pre><code>python cam.py --face cascades\haarcascade_frontalface_default.xml
+</code></pre><p>执行结果：</p>
+<p><img src="https://i.imgur.com/S3PoGOb.png" alt=""></p>
+<p><img src="https://i.imgur.com/W9DSULB.png" alt=""></p>
+<p>完整代码：</p>
+<p>链接：<a href="https://pan.baidu.com/s/1MMrksgrEw5Xr-F2R6lDTpw" target="_blank" rel="noopener">https://pan.baidu.com/s/1MMrksgrEw5Xr-F2R6lDTpw</a>  提取码：lk0j </p>
+<h3 id="更多的参考："><a href="#更多的参考：" class="headerlink" title="更多的参考："></a>更多的参考：</h3><p><a href="https://ppao.pyimagesearch.com/lessons/case-studies-webcam-face-detection/" target="_blank" rel="noopener">Case Studies – Webcam Face Detection</a></p>
+<p><a href="http://www.pyimagesearch.com/2015/12/21/increasing-webcam-fps-with-python-and-opencv/" target="_blank" rel="noopener">Increasing webcam FPS with Python and OpenCV</a></p>
+<p><a href="http://www.pyimagesearch.com/2015/12/28/increasing-raspberry-pi-fps-with-python-and-opencv/" target="_blank" rel="noopener">Increasing Raspberry Pi FPS with Python and OpenCV</a></p>
+<p><a href="http://www.pyimagesearch.com/2016/01/04/unifying-picamera-and-cv2-videocapture-into-a-single-class-with-opencv/" target="_blank" rel="noopener">Unifying picamera and cv2.VideoCapture into a single class with OpenCV</a></p>
+<p><a href="https://www.pyimagesearch.com/2016/01/18/multiple-cameras-with-the-raspberry-pi-and-opencv/" target="_blank" rel="noopener">Multiple cameras with the Raspberry Pi and OpenCV</a></p>
 <hr>
       
     </div>
@@ -577,7 +600,7 @@ cv2.waitKey(0)
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://0Leo0.github.io/2018/OpenCV_python3_08.html" title="OpenCV_python3_08">https://0Leo0.github.io/2018/OpenCV_python3_08.html</a>
+    <a href="https://0Leo0.github.io/2018/case_study_02.html" title="case study_webcam face detection">https://0Leo0.github.io/2018/case_study_02.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -593,7 +616,7 @@ cv2.waitKey(0)
       
         <div class="post-tags">
           
-            <a href="/tags/Opencv/" <i="" class="fa fa-tag"> Opencv</a>
+            <a href="/tags/case-study/" <i="" class="fa fa-tag"> case study</a>
           
         </div>
       
@@ -606,20 +629,15 @@ cv2.waitKey(0)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-	        <a href="/2018/OpenCV_python3_09.html" rel="prev" title="OpenCV_python3_09">
-
-	          <i class="fa fa-chevron-left"></i> OpenCV_python3_09
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
 	      
-	        <a href="/2018/OpenCV_python3_07.html" rel="next" title="OpenCV_python3_07">
+	        <a href="/2018/case_study_01.html" rel="next" title="case study_face detection">
 
-	          OpenCV_python3_07 <i class="fa fa-chevron-right"></i>
+	          case study_face detection <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -859,7 +877,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Practical-Python-and-OpenCV-3rd-Edition-08"><span class="nav-number">1.</span> <span class="nav-text">Practical Python and OpenCV,3rd Edition 08</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#拆分和合并通道-splitting-and-merging-channels"><span class="nav-number">1.1.</span> <span class="nav-text">拆分和合并通道(splitting and merging channels)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更多的参考："><span class="nav-number">1.2.</span> <span class="nav-text">更多的参考：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Webcam-face-detection"><span class="nav-number">1.</span> <span class="nav-text">Webcam face detection</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更多的参考："><span class="nav-number">1.1.</span> <span class="nav-text">更多的参考：</span></a></li></ol></li></ol></div>
             
 
           </div>
