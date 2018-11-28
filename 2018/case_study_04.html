@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="markdown,">
+  <meta name="keywords" content="case study,">
 
 
 
@@ -96,20 +96,17 @@
 
 
 
-<meta name="description" content="什么？你竟然还不会用markdown？">
-<meta name="keywords" content="markdown">
+<meta name="keywords" content="case study">
 <meta property="og:type" content="article">
-<meta property="og:title" content="markdown语法学习">
-<meta property="og:url" content="https://0Leo0.github.io/2018/Markdown grammar.html">
+<meta property="og:title" content="case study_eye tracking">
+<meta property="og:url" content="https://0Leo0.github.io/2018/case_study_04.html">
 <meta property="og:site_name" content="Lovelife">
-<meta property="og:description" content="什么？你竟然还不会用markdown？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://s1.ax1x.com/2018/10/26/iy5Th9.jpg">
-<meta property="og:updated_time" content="2018-10-27T17:04:22.290Z">
+<meta property="og:image" content="https://i.imgur.com/LXkezlG.png">
+<meta property="og:updated_time" content="2018-11-28T02:09:48.665Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="markdown语法学习">
-<meta name="twitter:description" content="什么？你竟然还不会用markdown？">
-<meta name="twitter:image" content="https://s1.ax1x.com/2018/10/26/iy5Th9.jpg">
+<meta name="twitter:title" content="case study_eye tracking">
+<meta name="twitter:image" content="https://i.imgur.com/LXkezlG.png">
 
 
 
@@ -139,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="https://0Leo0.github.io/2018/Markdown grammar.html">
+  <link rel="canonical" href="https://0Leo0.github.io/2018/case_study_04.html">
 
 
 
@@ -161,7 +158,7 @@
 
 
 
-  <title>markdown语法学习 | Lovelife</title>
+  <title>case study_eye tracking | Lovelife</title>
   
 
 
@@ -343,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://0Leo0.github.io/2018/Markdown grammar.html">
+    <link itemprop="mainEntityOfPage" href="https://0Leo0.github.io/2018/case_study_04.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Leowen">
@@ -360,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">markdown语法学习</h1>
+          <h1 class="post-title" itemprop="name headline">case study_eye tracking</h1>
         
 
         <div class="post-meta">
@@ -372,8 +369,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-26T19:17:57+08:00">
-                2018-10-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-28T18:17:50+08:00">
+                2018-11-28
               </time>
             
 
@@ -395,8 +392,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/markdown/" itemprop="url" rel="index">
-                    <span itemprop="name">markdown</span>
+                  <a href="/categories/计算机视觉/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机视觉</span>
                   </a>
                 </span>
 
@@ -426,7 +423,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.9k
+                  1.7k
                 </span>
               
 
@@ -449,10 +446,6 @@
           
 
           
-              <div class="post-description">
-                  什么？你竟然还不会用markdown？
-              </div>
-          
 
         </div>
       </header>
@@ -471,202 +464,136 @@
 
 
 <a id="more"></a>
-<h2 id="欢迎使用MarkdownPad编辑阅读器"><a href="#欢迎使用MarkdownPad编辑阅读器" class="headerlink" title="欢迎使用MarkdownPad编辑阅读器"></a>欢迎使用MarkdownPad编辑阅读器</h2><hr>
-<h3 id="粗体和斜体"><a href="#粗体和斜体" class="headerlink" title="粗体和斜体"></a>粗体和斜体</h3><p>使用 一对<code>*</code> 或者 <code>_</code> 表示包围的字体斜体显示<br>而一对<code>**</code> 或者<code>__</code> 来表示粗体。</p>
-<p>例如：</p>
-<pre><code>*你好，世界*
-**你好，世界**
-</code></pre><p>显示效果为：</p>
-<p><em>你好，世界</em></p>
-<p><strong>你好，世界</strong></p>
-<h3 id="分级标题"><a href="#分级标题" class="headerlink" title="分级标题"></a>分级标题</h3><p>Markdown 的标题有Setext和Atx两种语法形式，在Setex中，在文本下面标注<code>=</code>表示最高级标题，在下面标注<code>-</code>表示第二级标题，比如下面的Setext形式输出一级标题和二级标题</p>
-<pre><code>Headline 1
-==========
+<h2 id="Eye-tracking"><a href="#Eye-tracking" class="headerlink" title="Eye tracking"></a>Eye tracking</h2><hr>
+<p>新建一个文件夹，命名为<code>preprocess</code>，然后在里面新建文件<code>eyetracker.py</code>文件。键入如下代码：</p>
+<pre><code>import cv2 
 
-Headline 2
---
-</code></pre><p>当然也可以使用Atx形式输出各级标题</p>
-<pre><code>#Headline 1 
-##Headline 2
-</code></pre><h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p>Markdown中使用空白行来分割段落，比如下面两端文本，只需要在两端之间加上一行空行，Markdown就会为文本分段</p>
-<pre><code>Hello world 
-我是空白行  
-你好啊世界
-</code></pre><p>显示效果为：</p>
-<p>Hello world </p>
-<p>你好啊世界</p>
-<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>Markdown支持HTML嵌套，我们可以利用HTML标记实现更改颜色的需求，更改颜色代码如下：</p>
-<pre><code>Default Color
-&lt;font color=&apos;red&apos;&gt;Red Color&lt;/font&gt;
-&lt;font color=&apos;blue&apos;&gt;Blue Color&lt;/font&gt;
-&lt;font color=&apos;green&apos;&gt;Green Color&lt;/font&gt;
-&lt;font color=&apos;yellow&apos;&gt;Yellow Color&lt;/font&gt;
-&lt;font color=&apos;pink&apos;&gt;Pink Color&lt;/font&gt;
-&lt;font color=&apos;purple&apos;&gt;Purple Color&lt;/font&gt;
-&lt;font color=&apos;orange&apos;&gt;Orange Color&lt;/font&gt;
-</code></pre><p>显示效果为：</p>
-<font color="red">Red Color</font>
+class EyeTracker:
+    def __init__(self,faceCascadePath,eyeCascadePath):
+        # load the face and eye detector
+        self.faceCascade = cv2.CascadeClassifier(faceCascadePath)
+        self.eyeCascade = cv2.CascadeClassifier(eyeCascadePath)
 
-<font color="blue">Blue Color</font>
+    def track(self,image):
+        # detect faces in the image and initialize the list of
+        # rectangles containing the faces and eyes
+        faceRects = self.faceCascade.detectMultiScale(image,
+            scaleFactor=1.1,minNeighbors=5,minSize=(30,30),
+            flags=cv2.CASCADE_SCALE_IMAGE) 
+        rects = []
+</code></pre><p>我们定义了一个<code>EyeTracker</code>类，然后定义构造函数<code>__int__</code>。我们的<code>EyeTracker</code>类有两个参数：<code>faceCascadePath</code>和<code>eyeCascadePath</code>。第一个是OpenCV中内置面部级联分类器(face cascade classifier)的路径。第二个是眼睛级联分类器(eye cascade classifier)的路径。</p>
+<p>然后，我们使用<code>cv2.CascadeClassifier</code>函数从磁盘加载两个分类器。</p>
+<p>接着，我们定义了用于在图像中找到眼睛的轨迹方法(track)。此方法仅接收一个参数，即包含要跟踪的面部和眼睛的图像。</p>
+<p>然后我们调用<code>faceCascade</code>分类器的<code>detectMultiScale</code>方法。该方法向我们返回图像中每个面部的边界框位置(即，x，y，宽度和高度)。</p>
+<p>然后，我们初始化一个矩形列表，用于包含图像中的面部和眼睛矩形。</p>
+<p>现在我们的图像中的脸部区域已经找到了，让我们看看如何使用它们来找到眼睛：</p>
+<pre><code># loop over the face bounding boxes
+for (fX,fY,fW,fH) in faceRects:
+    # extract the face ROI and update the list of
+    # bounding boxes
+    faceROI = image[fY:fY + fH,fX:fX + fW]
+    rects.append((fX,fY,fX + fW,fY + fH))
 
-<font color="green">Green Color</font>
+    # detect eyes in the face ROI
+    eyeRects = self.eyeCascade.detectMultiScale(faceROI,
+        scaleFactor=1.1,minNeighbors=10,
+        minSize=(20,20),
+        flags=cv2.CASCADE_SCALE_IMAGE)
 
-<font color="yellow">Yellow Color</font>
+    # loop over the eye bounding boxes
+    for (eX,eY,eW,eH) in eyeRects:
+        # update the list of boounding boxes
+        rects.append((fX + eX,fY + eY,fX + eX + eW,fY + eY + eH))
 
-<font color="pink">Pink Color</font>
+# return the rectangles representing bounding
+# boxes around the faces and eyes
+return rects 
+</code></pre><p>然后，我们使用NumPy阵列切片从图像中提取面部感兴趣区域(ROI:region of interest)。faceROI变量现在包含面部的边界框区域。</p>
+<p>最后，我们将矩形的(x，y)坐标附加到rects列表中供以后使用。</p>
+<p>接下来，我们移到眼睛检测。这一次，我们调用了<code>eyeCascade</code>的<code>detectMultiScale</code>方法，该方法返回了出了眼睛出现在图像位置的列表。</p>
+<p>我们使用了更大的<code>minNeighbors</code>值，因为眼睛级联(eye cascade)往往比其他分类器产生更多的误报。</p>
+<p><strong>注意</strong>：这些参数被硬编码到EyeTracker类中。如果您将此脚本应用于自己的图像和视频，则可能需要稍微调整一下以获得最佳效果。从<code>scaleFactor</code>变量开始，然后转到<code>minNeighbors</code>。</p>
+<p>接着，我们在眼睛的边界框区域上循环，并更新边界框矩形列表。</p>
+<p>最后，我们将边界框列表将返回给调用者。</p>
+<p>文件目录</p>
+<p><img src="https://i.imgur.com/LXkezlG.png" alt=""></p>
+<p>现在，我们将困难的部分已经完成。是时候通过创建<code>eyetracking.py</code>将各个部分粘合在一起了：</p>
+<pre><code>from preprocess import EyeTracker 
+import imutils
+import argparse
+import cv2 
 
-<font color="purple">Purple Color</font>
+# construct the argument parse and parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument(&quot;-f&quot;, &quot;--face&quot;, required = True,
+    help = &quot;path to where the face cascade resides&quot;)
+ap.add_argument(&quot;-e&quot;, &quot;--eye&quot;, required = True,
+    help = &quot;path to where the eye cascade resides&quot;)
+ap.add_argument(&quot;-v&quot;, &quot;--video&quot;,
+    help = &quot;path to the (optional) video file&quot;)
+args = vars(ap.parse_args())
 
-<font color="orange">Orange Color</font>
+# construct the eye tracker
+et = EyeTracker(args[&quot;face&quot;],args[&quot;eye&quot;])
+</code></pre><p>首先，我们输入必要的包。我们将使用我们自定义<code>EyeTracker</code>类来查找图像中的面部和眼睛。用<code>imutils</code>，一组图像处理便利功能来帮助我们调整图像大小。最后，使用<code>argparse</code>进行命令行解析，并使用cv2进行OpenCV绑定。</p>
+<p>然后，我们解析了我们的命令行参数：–face，这是我们的面部级联分类器(face cascade classifier)的路径，–eye，是我们眼睛级联分类器(eye cascade classifier)的路径。</p>
+<p>和前面一样，创建一个可选参数–video,它指向磁盘上的视频文件。</p>
+<p>最后，我们分别使用脸部和眼睛分类器的路径实例化我们的<code>EyeTracker</code>类。</p>
+<pre><code># if a video path was not supplied, grab the reference
+# to the gray
+if not args.get(&quot;video&quot;):
+    camera = cv2.VideoCapture(0)
+# otherwise, load the video
+else:
+    camera = cv2.VideoCapture(args[&quot;video&quot;])
 
-<p>更改字号、字体也可以使用HTML轻松实现</p>
-<pre><code>&lt;font size=&apos;-2&apos;&gt;Small Size&lt;/font&gt;
-Normal Size
-&lt;font size=&apos;+2&apos;&gt;Big Size&lt;/font&gt;
-&lt;font size=&apos;+2&apos; face=&apos;楷体&apos;&gt;楷体&lt;/font&gt;
-</code></pre><p>输出显示为：</p>
-<font size="-2">Small Size</font>
+# keep looping
+while True:
+    # grab the current frame
+    (grabbed,frame) = camera.read()
 
-<p>Normal Size</p>
-<font size="+2">Big Size</font>
+    # if we are viewing a video and we did not grab a
+    # frame, then we have reached the end of the video
+    if args.get(&quot;video&quot;) and not grabbed:
+        break 
+</code></pre><p>如果未提供视频文件，在这种情况下，<code>cv2.VideoCapture</code>函数被告知使用系统的网络摄像头。否则，如果提供了视频文件的路径,则<code>cv2.VideoCapture</code>函数将打开视频文件并返回指向它的指针。</p>
+<p>接着，我们开始在视频frame上循环。对相机调用<code>read()</code>会抓取视频中的下一帧。<code>read</code>方法返回一个元组，包含(1)表示frame是否被成功读取的布尔值，以及(2)frame本身。</p>
+<p>然后，我们进行检查以确定视频是否到达尾部。我们仅在从文件中读取视频时才执行此检查。</p>
+<p>现在我们拥有视频中的当前帧，可以执行面部和眼睛检测：</p>
+<pre><code>    # resize the frame and convert it to grayscale
+    frame = imutils.resize(frame,width=300)
+    gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
 
-<font size="+2" face="楷体">楷体</font>
+    # detect faces and eyes in the image
+    rects = et.track(gray)
 
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>Markdown使用email的区块引用方式，即右尖括号<code>&gt;</code>后面跟引用的内容，如下</p>
-<pre><code>&gt;Hello World
-&gt;你好，世界
-</code></pre><p>其输出为：</p>
-<blockquote>
-<p>Hello World </p>
-</blockquote>
-<blockquote>
-<p>你好，世界</p>
-</blockquote>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>Markdown中使用型号<code>*</code> , 加号<code>+</code> 以及减号<code>-</code> 来表示无序列表(中间有空格)</p>
-<pre><code>* 我是列表
-+ 我也是列表
-- 我还是列表
-</code></pre><p>其输出为：</p>
-<ul>
-<li>我是列表</li>
-</ul>
-<ul>
-<li>我也是列表</li>
-</ul>
-<ul>
-<li>我还是列表</li>
-</ul>
-<p>有序列表使用一个数字加一个英文句点作为项目标记，比如</p>
-<pre><code>1. 我是列表
-2. 我也是列表
-</code></pre><p>其输出如下：</p>
-<ol>
-<li><p>我是列表</p>
-</li>
-<li><p>我也是列表</p>
-</li>
-</ol>
-<p>同时，列表也是可以进行嵌套使用的(中间不用空格)，比如：</p>
-<pre><code>1.你好，世界
-&gt;你好，世界
-2.Hello World
-&gt;Hello World
-</code></pre><p>输出结果为：</p>
-<p>1.你好，世界</p>
-<blockquote>
-<p>你好，世界</p>
-</blockquote>
-<p>2.Hello World</p>
-<blockquote>
-<p>Hello World</p>
-</blockquote>
-<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>Markdown支持行内和参考两种形式的链接语法，两种都是使用中括号来把文字转成链接，行内形式是中括号包围文字，后面紧跟圆括号包围的链接，其代码如下所示：</p>
-<pre><code>[我的博客](https://0leo0.github.io/)
-</code></pre><p>其输出为：</p>
-<p><a href="https://0leo0.github.io/">我的博客</a></p>
-<p>当然，我们也可以给我们的链接加上一个title属性，</p>
-<pre><code>[我的博客](https://0leo0.github.io/ &quot;我是一个标题&quot;)
-</code></pre><p>输出如下：</p>
-<p><a href="https://0leo0.github.io/" title="我是一个标题">我的博客</a></p>
-<p>参考形式的链接可以在原文中为链接定义一个名称，然后在文章的其他地方定义该链接的内容，其语法格式为 <code>[链接文本][链接名称]</code> </p>
-<pre><code>我想搜索关于Python的内容，可以去[Google][1],以及[Yahoo][2]和[Baidu][3]
-</code></pre><p>然后在别的地方定义链接内容，语法格式为<code>[链接名称]:空白符 URL &quot;title&quot;</code></p>
-<pre><code>[1]: https://google.com/ &quot;Google&quot;
-[2]: https://yahoo.com/ &quot;Yahoo&quot;
-[3]: https://baidu.com/ &quot;Baidu&quot;
-</code></pre><p>显示效果为：</p>
-<p>我想搜索关于Python的内容，可以去<a href="https://google.com/" title="Google" target="_blank" rel="noopener">Google</a>,以及<a href="https://yahoo.com/" title="Yahoo" target="_blank" rel="noopener">Yahoo</a>和<a href="https://baidu.com/" title="Baidu" target="_blank" rel="noopener">Baidu</a></p>
-<p>另外，使用<code>&lt;&gt;</code> 包括的URL或者邮箱地址会被自动转换为超链接</p>
-<pre><code>&lt;https://0leo0.github.io/&gt;
-&lt;wen_9407@yahoo.com&gt;
-</code></pre><p>效果如下：</p>
-<p><a href="https://0leo0.github.io/">https://0leo0.github.io/</a></p>
-<p><a href="mailto:&#119;&#101;&#110;&#x5f;&#57;&#x34;&#x30;&#55;&#64;&#x79;&#97;&#x68;&#x6f;&#x6f;&#x2e;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#119;&#101;&#110;&#x5f;&#57;&#x34;&#x30;&#55;&#64;&#x79;&#97;&#x68;&#x6f;&#x6f;&#x2e;&#x63;&#x6f;&#109;</a></p>
-<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>图片的语法格式和链接类似，也分为行内形式和参考形式。</p>
-<p>行内形式语法格式为：<code>![alt text](URL title)</code>,其中alt,text以及text都可以选择性的加入，但URL必须有</p>
-<pre><code>![我要显示图片](https://imgchr.com/i/iy5Th9)
-</code></pre><p>显示的效果如下：</p>
-<p><img src="https://s1.ax1x.com/2018/10/26/iy5Th9.jpg" alt="我要显示图片" title="海贼王"></p>
-<p>参考形式分为两部分，声明图片链接名称和定义图片链接</p>
-<p>其中声明图片链接语法格式为：<code>![alt text][id]</code></p>
-<p>定义图片链接内容的语法格式为： <code>[id]:URL &quot;title&quot;</code>.</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>在一般段落文字中，可以使用反引号`来标记代码区段。</p>
-<pre><code>我喜欢这个世界`&lt;blank&gt;`，哈哈
-</code></pre><p>显示效果</p>
-<p>我喜欢这个世界<code>&lt;blank&gt;</code>，哈哈</p>
-<p>在Markdown中，如果行开头有4个空格，将被视为代码。但是这种方式，不推荐，我们推荐的方式是代码块的首行用3个反引号`和编程语言名称(C、Python等)标记代码块开始，代码块的结尾用3个反引号来闭合代码块。</p>
-<p>比如，将一段python代码插入到Markdown，首行用3个反引号来标记代码块，最后一行再用3个反引号来闭合代码块。</p>
-<pre><code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line">parser = argparse.ArgumentParser(description=<span class="string">"calculate X to the power of Y"</span>)</span><br><span class="line">parser.add_argument(<span class="string">'square'</span>,type=int,\</span><br><span class="line">        help=<span class="string">"display a square of a given number"</span>)</span><br><span class="line">parser.add_argument(<span class="string">'-v'</span>,<span class="string">"--verbosity"</span>,type=int,choices=[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>],\</span><br><span class="line">        default=<span class="number">1</span>,help=<span class="string">"increase output verbosity"</span>)</span><br><span class="line">args = parser.parse_args()</span><br><span class="line">answer = args.square ** <span class="number">2</span></span><br></pre></td></tr></table></figure>
-</code></pre><p>那么其显示效果为：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"></span><br><span class="line">parser = argparse.ArgumentParser(description=<span class="string">"calculate X to the power of Y"</span>)</span><br><span class="line"></span><br><span class="line">parser.add_argument(<span class="string">'square'</span>,type=int,\</span><br><span class="line">        help=<span class="string">"display a square of a given number"</span>)</span><br><span class="line"></span><br><span class="line">parser.add_argument(<span class="string">'-v'</span>,<span class="string">"--verbosity"</span>,type=int,choices=[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>],\</span><br><span class="line">        default=<span class="number">1</span>,help=<span class="string">"increase output verbosity"</span>)</span><br><span class="line"></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">answer = args.square ** <span class="number">2</span></span><br></pre></td></tr></table></figure>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>考虑HTML和CSS<br>(使用列表的话，下面的会显示出作用，而不是以代码的形式显示出来)</p>
-<p>1.分割线和空行</p>
-<pre><code>/*分割线*/
-&lt;hr /&gt;
-/*空行*/
-&lt;br /&gt;
-</code></pre><p>2.引用</p>
-<pre><code>&lt;blockquote&gt;引用内容&lt;/blockquote&gt;
-/*如果上下间距很小，可以加个P*/
-&lt;p&gt;&lt;blockquote&gt;引用内容&lt;/blockquote&gt;&lt;/p&gt;
-</code></pre><p>3.居中与右对齐</p>
-<pre><code>/*居中*/
-&lt;center&gt;内容&lt;/center&gt;
-/*右对齐*/
-&lt;p style=&quot;text-align:right&quot;&gt;内容&lt;/p&gt;
-</code></pre><p>4.字体大小和颜色</p>
-<pre><code>&lt;font colr=&quot;#xxxxxx&quot; size=&quot;numbr&quot;&gt;内容&lt;/font&gt;
-//详细请查看W3schcool：https://www.w3school.com.cn/tags/tag_font.asp
-</code></pre><p>5.Todo list</p>
-<pre><code>&lt;ul&gt;
-&lt;li&gt;&lt;i class=&quot;fa fa-check-square&quot;&gt;&lt;/i&gt;已完成&lt;/li&gt;
-&lt;li&gt;&lt;i class=&quot;fa fasquare&quot;&gt;&lt;/i&gt;未完成&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre><h2 id="Markdown-高阶语法"><a href="#Markdown-高阶语法" class="headerlink" title="Markdown 高阶语法"></a>Markdown 高阶语法</h2><h3 id="内容目录"><a href="#内容目录" class="headerlink" title="内容目录"></a>内容目录</h3><p>在段落中填写[TOC]以显示全文内容的目录结构</p>
-<p>[TOC]</p>
-<h3 id="标签分类"><a href="#标签分类" class="headerlink" title="标签分类"></a>标签分类</h3><p>在编辑区任意行的的列首位置输入以下代码给文稿标签： </p>
-<p>标签: 数学 英语 Markdown</p>
-<p>或者</p>
-<p>Tags: 数学 英语 Markdown</p>
-<h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>使用~~ 表示删除线。</p>
-<p>~~ 这是一段错误的文本 ~~</p>
-<h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p>使用[^keyword]表示脚注</p>
-<p>这是一个脚注<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>的样例</p>
-<h3 id="LaTex公式"><a href="#LaTex公式" class="headerlink" title="LaTex公式"></a>LaTex公式</h3><p>$表示行内公式</p>
-<p>质能守恒方程 $E=mc<sup>2</sup></p>
-<p>这里的上标我使用sup / sup，用四个尖括号括起来，同样下标为sub</p>
-<p>而$$表示整行公式，具体参考<a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="noopener">MathJax</a></p>
+    # loop over the face bounding boxes and draw them
+    for rect in rects:
+        cv2.rectangle(frame,(rect[0],rect[1]),
+            (rect[2],rect[3]),(0,255,0),2)
+
+    # show the tracked eyes and face
+    cv2.imshow(&quot;Tracking&quot;,frame)
+
+    # if the &apos;q&apos; key is pressed, stop the loop
+    if cv2.waitKey(1) &amp; 0xFF == ord(&quot;q&quot;):
+        break
+
+# cleanup the camera and close any open windows
+camera.release()
+cv2.destroyAllWindows()
+</code></pre><p>为了使面部和眼睛检测更快，我们首先调整图像的大小，使其具有300像素的宽度。</p>
+<p>然后，我们将其转换为灰度。转换为灰度倾向于提高级联分类器的准确性。</p>
+<p>使用视频中的当前帧调用<code>EyeTracker</code>的<code>track</code>方法。然后，此方法返回与图像中的面部和眼睛对应的rects列表。</p>
+<p>接着，我们开始在边界框矩形上循环，并使用<code>cv2.rectangle</code>函数绘制每个矩形，其中第一个参数是frame，第二个是边界框的起始(x，y)坐标，第三个是结束frame的(x，y)坐标，后面是框的颜色(绿色)和厚度(2个像素)。</p>
+<p>然后我们显示检测到的面部和眼睛的frame。我们进行检查以确定用户是否按下了q键。如果用户这样做，那么循环就会终止。</p>
+<p>最后，我们执行清理，其中释放相机指针并关闭OpenCV创建的所有窗口。</p>
+<pre><code>python eyetracking.py --face cascades\haarcascade_frontalface_default.xml --eye cascades\haarcascade_eye.xml
+</code></pre><p>完整代码：</p>
+<p>链接：<a href="https://pan.baidu.com/s/1nBBrbk0GD8pl2aF_sscbuA" target="_blank" rel="noopener">https://pan.baidu.com/s/1nBBrbk0GD8pl2aF_sscbuA</a>  提取码：wwpy </p>
+<h3 id="更多的参考："><a href="#更多的参考：" class="headerlink" title="更多的参考："></a>更多的参考：</h3><p><a href="https://ppao.pyimagesearch.com/lessons/case-studies-eye-tracking/" target="_blank" rel="noopener">Case Studies – Eye Tracking</a></p>
+<p><a href="http://thume.ca/projects/2012/11/04/simple-accurate-eye-center-tracking-in-opencv/" target="_blank" rel="noopener">Simple, accurate eye center tracking in OpenCV</a></p>
 <hr>
-<h3 id="参考网址："><a href="#参考网址：" class="headerlink" title="参考网址："></a>参考网址：</h3><p><a href="https://www.zybuluo.com/static/editor/cmd-manual.html" target="_blank" rel="noopener">Cmd Markdown简明语法手册</a></p>
-<p><a href="https://www.cnblogs.com/dezheng/p/3834813.html" target="_blank" rel="noopener">Markdown入门基础</a></p>
-<p><a href="https://fontawesome.com/v4.7.0/examples/" target="_blank" rel="noopener">fontawesome</a></p>
-<p><a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">reuixiy</a></p>
-<p><span id="inline-blue">后话</span></p>
-<p>第一篇markdown写的文章弄的我好辛苦，主要是用markdownpad编辑好的和hexo解析出的html不一样，在网页上看到的不是自己想要的，后面希望会好一点吧！！</p>
-<hr>
-
-
-
       
     </div>
     
@@ -715,7 +642,7 @@ Normal Size
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://0Leo0.github.io/2018/Markdown grammar.html" title="markdown语法学习">https://0Leo0.github.io/2018/Markdown grammar.html</a>
+    <a href="https://0Leo0.github.io/2018/case_study_04.html" title="case study_eye tracking">https://0Leo0.github.io/2018/case_study_04.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -731,7 +658,7 @@ Normal Size
       
         <div class="post-tags">
           
-            <a href="/tags/markdown/" <i="" class="fa fa-tag"> markdown</a>
+            <a href="/tags/case-study/" <i="" class="fa fa-tag"> case study</a>
           
         </div>
       
@@ -744,17 +671,17 @@ Normal Size
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-	        <a href="/2018/git_1.html" rel="prev" title="git学习之路_1_安装git以及创建版本库">
-
-	          <i class="fa fa-chevron-left"></i> git学习之路_1_安装git以及创建版本库
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
 	      
+	        <a href="/2018/case_study_05.html" rel="next" title="case study_handwriting recognition with hog">
+
+	          case study_handwriting recognition with hog <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -992,7 +919,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#欢迎使用MarkdownPad编辑阅读器"><span class="nav-number">1.</span> <span class="nav-text">欢迎使用MarkdownPad编辑阅读器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#粗体和斜体"><span class="nav-number">1.1.</span> <span class="nav-text">粗体和斜体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分级标题"><span class="nav-number">1.2.</span> <span class="nav-text">分级标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#段落"><span class="nav-number">1.3.</span> <span class="nav-text">段落</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字体"><span class="nav-number">1.4.</span> <span class="nav-text">字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">1.5.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">1.6.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接"><span class="nav-number">1.7.</span> <span class="nav-text">链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片"><span class="nav-number">1.8.</span> <span class="nav-text">图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">1.9.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他"><span class="nav-number">1.10.</span> <span class="nav-text">其他</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown-高阶语法"><span class="nav-number">2.</span> <span class="nav-text">Markdown 高阶语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内容目录"><span class="nav-number">2.1.</span> <span class="nav-text">内容目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签分类"><span class="nav-number">2.2.</span> <span class="nav-text">标签分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除线"><span class="nav-number">2.3.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#脚注"><span class="nav-number">2.4.</span> <span class="nav-text">脚注</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LaTex公式"><span class="nav-number">2.5.</span> <span class="nav-text">LaTex公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考网址："><span class="nav-number">2.6.</span> <span class="nav-text">参考网址：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Eye-tracking"><span class="nav-number">1.</span> <span class="nav-text">Eye tracking</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更多的参考："><span class="nav-number">1.1.</span> <span class="nav-text">更多的参考：</span></a></li></ol></li></ol></div>
             
 
           </div>

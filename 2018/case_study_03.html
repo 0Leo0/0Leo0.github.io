@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Lovelife">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/ELU46Yg.png">
-<meta property="og:updated_time" content="2018-11-27T10:47:16.030Z">
+<meta property="og:updated_time" content="2018-11-28T10:12:57.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="case study_object tracking in video">
 <meta name="twitter:image" content="https://i.imgur.com/ELU46Yg.png">
@@ -488,7 +488,7 @@ else:
     camera = cv2.VideoCapture(args[&quot;video&quot;])
 </code></pre><p>我们将使用NumPy进行数值处理，使用argparse解析命令行参数，使用cv2进行OpenCV绑定。time包是可选的。</p>
 <p>我们只需要一个命令行参数，–video，也就是我们视频的路径。</p>
-<p>我们将在视频中追踪的对象是蓝色物体。由于除了该物体外，蓝色在视频中的任何其他位置都不常见，因此她希望跟踪蓝色阴影。为了完成这种颜色跟踪，我们定义了蓝色阴影的下限和上限。请记住，OpenCV表示RGB颜色空间中的像素，但顺序相反。</p>
+<p>我们将在视频中追踪的对象是蓝色物体。由于除了该物体外，蓝色在视频中的任何其他位置都不常见，因此我们希望跟踪蓝色阴影。为了完成这种颜色跟踪，我们定义了蓝色阴影的下限和上限。请记住，OpenCV表示RGB颜色空间中的像素，但顺序相反。</p>
 <p>在这种情况下，如果大于R=0，G=67，B=100且小于R=50，G=128，B=255，则将颜色定义为“蓝色”。</p>
 <p>最后，我们打开视频文件并使用<code>cv2.VideoCapture</code>函数获取对它的引用。我们将此引用赋值给变量camera。</p>
 <pre><code># keep looping 
@@ -644,6 +644,11 @@ cv2.destroyAllWindows()
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+	        <a href="/2018/case_study_05.html" rel="prev" title="case study_handwriting recognition with hog">
+
+	          <i class="fa fa-chevron-left"></i> case study_handwriting recognition with hog
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
@@ -747,7 +752,7 @@ cv2.destroyAllWindows()
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -962,7 +967,7 @@ show_date_time();
 
 <div class="theme-info">
 <div class="powered-by"></div>
-<span class="post-count">博客全站共29.5k字</span>
+<span class="post-count">博客全站共35.4k字</span>
 </div>
 
         
