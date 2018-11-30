@@ -83,7 +83,7 @@
 
 
 
-  <meta name="keywords" content="git,">
+  <meta name="keywords" content="case study,">
 
 
 
@@ -96,25 +96,18 @@
 
 
 
-<meta name="description" content="git学习之时光穿梭">
-<meta name="keywords" content="git">
+<meta name="keywords" content="case study">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git学习之路_2_文件管理">
-<meta property="og:url" content="https://0Leo0.github.io/2018/git_2.html">
+<meta property="og:title" content="case study_plant classification">
+<meta property="og:url" content="https://0Leo0.github.io/2018/case_study_06.html">
 <meta property="og:site_name" content="Lovelife">
-<meta property="og:description" content="git学习之时光穿梭">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://s1.ax1x.com/2018/11/04/i5oLX8.png">
-<meta property="og:image" content="https://s1.ax1x.com/2018/11/04/i5oTfI.png">
-<meta property="og:image" content="https://s1.ax1x.com/2018/11/04/i5oHpt.png">
-<meta property="og:image" content="https://s1.ax1x.com/2018/11/04/i5ootA.png">
-<meta property="og:image" content="https://s1.ax1x.com/2018/11/04/i5oq6f.png">
-<meta property="og:image" content="https://s1.ax1x.com/2018/11/04/i5ob1P.png">
-<meta property="og:updated_time" content="2018-11-04T12:26:15.830Z">
+<meta property="og:image" content="https://i.imgur.com/lMHnTd9.png">
+<meta property="og:image" content="https://i.imgur.com/4rQirof.png">
+<meta property="og:updated_time" content="2018-11-30T02:35:47.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git学习之路_2_文件管理">
-<meta name="twitter:description" content="git学习之时光穿梭">
-<meta name="twitter:image" content="https://s1.ax1x.com/2018/11/04/i5oLX8.png">
+<meta name="twitter:title" content="case study_plant classification">
+<meta name="twitter:image" content="https://i.imgur.com/lMHnTd9.png">
 
 
 
@@ -144,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="https://0Leo0.github.io/2018/git_2.html">
+  <link rel="canonical" href="https://0Leo0.github.io/2018/case_study_06.html">
 
 
 
@@ -166,7 +159,7 @@
 
 
 
-  <title>git学习之路_2_文件管理 | Lovelife</title>
+  <title>case study_plant classification | Lovelife</title>
   
 
 
@@ -348,7 +341,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://0Leo0.github.io/2018/git_2.html">
+    <link itemprop="mainEntityOfPage" href="https://0Leo0.github.io/2018/case_study_06.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Leowen">
@@ -365,7 +358,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git学习之路_2_文件管理</h1>
+          <h1 class="post-title" itemprop="name headline">case study_plant classification</h1>
         
 
         <div class="post-meta">
@@ -377,8 +370,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-29T12:17:57+08:00">
-                2018-10-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-29T12:17:50+08:00">
+                2018-11-29
               </time>
             
 
@@ -400,8 +393,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
+                  <a href="/categories/计算机视觉/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机视觉</span>
                   </a>
                 </span>
 
@@ -431,7 +424,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  389
+                  2.3k
                 </span>
               
 
@@ -447,16 +440,12 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  9
                 </span>
               
             </div>
           
 
-          
-              <div class="post-description">
-                  git学习之时光穿梭
-              </div>
           
 
         </div>
@@ -476,27 +465,146 @@
 
 
 <a id="more"></a>
-<h2 id="时光穿梭"><a href="#时光穿梭" class="headerlink" title="时光穿梭"></a>时光穿梭</h2><p>前面我们已经添加并提交了一个readme.txt文件，现在我们将文件进行修改，改为下面的内容：</p>
-<p><img src="https://s1.ax1x.com/2018/11/04/i5oLX8.png" alt="修改readme.txt"></p>
-<p>现在，我们运行命令<code>git status</code>看一看会有什么结果：</p>
-<p><img src="https://s1.ax1x.com/2018/11/04/i5oTfI.png" alt="运行git status命令"></p>
-<p><code>git status</code>命令可以让我们时刻掌握仓库当前的状态，从上图中可以看出来，redme.txt文件显然被修改过了，但是我们并没有准备提交我们的修改。如果我们不知道修改了什么样的内容，我们可以运行命令<code>git diff</code>来查看具体修改了什么样的内容。</p>
-<p><img src="https://s1.ax1x.com/2018/11/04/i5oHpt.png" alt="运行git diff命令"></p>
-<p>diff是英文difference的缩写，上图中显示的格式是Unix通用的diff格式，知道了我们对readme.txt文件做了那些修改，接下来我们把文件提交到仓库中，一样是两个步骤，第一步运行命令<code>git add</code></p>
-<pre><code>git add readme.txt 
-</code></pre><p>接下来在执行<code>git commit</code>命令之前，我们用命令<code>git status</code>看看当前仓库的状态</p>
-<p><img src="https://s1.ax1x.com/2018/11/04/i5ootA.png" alt="运行git status命令"></p>
-<p>上面的<code>git status</code>命令告诉我们，将要被提交的修改包括readme.txt，接下来，我们可以放心的提交了：</p>
-<p><img src="https://s1.ax1x.com/2018/11/04/i5oq6f.png" alt="运行git commit命令"></p>
-<p>进行了提交之后，我们再用<code>git status</code>命令来查看仓库的当前状态</p>
-<p><img src="https://s1.ax1x.com/2018/11/04/i5ob1P.png" alt="运行git commit命令"></p>
-<p>Git告诉我们当前没有需要提交的修改，而且，工作目录是干净的(working tree clean)</p>
-<p><span id="inline-blue">本节命令</span></p>
-<p><code>git status</code>：掌握工作区的状态</p>
-<p>‘<code>git diff</code>：查看修改的内容</p>
-<h2 id="参考来源"><a href="#参考来源" class="headerlink" title="参考来源"></a>参考来源</h2><p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743858312764dca7ad6d0754f76aa562e3789478044000" target="_blank" rel="noopener">Git 时光穿梭 </a></p>
-<p><a href="https://www.git-tower.com/blog/git-cheat-sheet/" target="_blank" rel="noopener">Git cheat sheet英文版</a></p>
-<p><a href="https://www.kancloud.cn/thinkphp/git-cheat-sheet/39651" target="_blank" rel="noopener">Git cheat sheet中文版</a></p>
+<h2 id="Plant-classification"><a href="#Plant-classification" class="headerlink" title="Plant classification"></a>Plant classification</h2><hr>
+<p>新建一个rbghistogram.py文件</p>
+<pre><code>import cv2 
+
+class RGBHistogram:
+    def __init__(self,bins):
+        # store the number of bins the histogram will use 
+        self.bins = bins 
+
+    def describe(self,image,mask=None):
+        # compute a 3D histogram in the RGB colorspace,
+        # then normalize the histogram so that images
+        # with the same content,but either scaled larger
+        # or smaller will have(roughly) the same histogram
+        hist = cv2.calcHist([image],[0,1,2],
+            mask,self.bins,[0,256,0,256,0,256])
+        cv2.normalize(hist,hist)
+
+        # return out 3D histogram as a flattened array
+        return hist.flatten() 
+</code></pre><p>我们首先导入cv2，这是我们需要创建图像描述符的唯一的package。</p>
+<p>然后，我们定义了RGBHistogram类，用于封装花卉图像的量化方式。<code>__init__</code>方法只接受一个参数——一个包含3D直方图的bins的列表。</p>
+<p>描述图像将由<code>describe</code>方法处理，该方法接收两个参数，一个将构建颜色直方图的图像，以及一个可选的mask。如果我们提供mask，则只有与mask区域相关联的像素将用于构造直方图。这允许我们仅描述图像的花瓣，忽略图像的其余部分(即，背景，其与花本身无关)。</p>
+<p>接着，构造直方图。<code>calcHist</code>函数的第一个参数是我们想要描述的图像的列表，该函数具体的参数请参考前面的文章。然后将生成的图像进行标准化，并以特征向量返回。</p>
+<p><em>注意：cv2.normalize函数在OpenCV 2.4.X和OpenCV 3.0之间略有不同。 在OpenCV 2.4.X中，cv2.normalize函数实际上会返回规范化的直方图。 但是，在OpenCV 3.0+中，cv2.normalize实际上对函数内的直方图进行了规范化，并更新了传入的第二个参数（即“输出”）。这是一个微妙但重要的区别，在使用这两个参数时要记住 OpenCV版本.</em></p>
+<p>现在已经定义了图像描述符，我们可以创建代码来对给定花朵的物种进行分类：</p>
+<pre><code>from __future__ import print_function
+from preprocess import RGBHistogram
+from sklearn.preprocessing import LabelEncoder
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.cross_validation import train_test_split
+from sklearn.metrics import classification_report
+import numpy as np 
+import argparse
+import glob
+import cv2 
+
+# construct the argument parser and parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument(&quot;-i&quot;, &quot;--images&quot;, required = True,
+    help = &quot;path to the image dataset&quot;)
+ap.add_argument(&quot;-m&quot;, &quot;--masks&quot;, required = True,
+    help = &quot;path to the image masks&quot;)
+args = vars(ap.parse_args())
+</code></pre><p>我们首先导入必要的package。我们首先导入了<code>RGBHistogram</code>用于描述我们的每个图像。</p>
+<p>然后导入<code>scikit-learn</code>库的<code>LabelEncoder</code>类。为了构建机器学习分类器以区分花种，我们首先需要一种方法来编码与每个花类相关联的“类标签”。我们希望将向日葵，番红花，雏菊和三色紫罗兰区分开来，但为了构建机器学习模型，这些种类(以字符串表示的)需要转换为整数。<code>LabelEncoder</code>类就是用来干这件事的。</p>
+<p>我们使用的实际分类模型是<code>RandomForestClassifier</code>。随机森林是用于分类的集成学习方法，由多个决策树组成。</p>
+<p>对于随机森林中的每棵树，构建一个自举(替换采样)样本，通常由66％的数据集组成。然后，基于自举样本构建决策树。在树中的每个节点处，仅采用预测变量的样本来计算节点分割标准。通常使用sqrt(n)预测变量，其中n是特征空间中预测变量的数量。然后重复该过程以训练森林中的多棵树(关于随机森林分类器的详细内容超出了本文的范围，有兴趣的可以参考机器学习方法)。</p>
+<p>但是，如果您是使用机器学习的新手，随机森林是一个很好的起点，特别是在计算机视觉领域，他们只需很少的努力即可获得更高的精度。同样，虽然这不适用于所有计算机视觉分类问题，但随机森林是获得基线准确度的良好起点。</p>
+<p>然后我们从<code>scikit-learn</code>导入<code>train_test_split</code>函数。在构建机器学习模型时，我们需要两组数据：训练集(training set)和测试(testing set)(或验证(validation set)）集。</p>
+<p>我们使用training data对机器学习模型进行训练(在这种情况下，我们使用随机森林学习模型)。然后使用testing data对模型进行评估。</p>
+<p>保持这两组是独一无二的非常重要，因为它允许在尚未看到的数据点上评估模型。如果模型已经看到了数据点，那么结果是有偏见的，因为它具有不公平的优势！</p>
+<p>最后，我们使用<code>NumPy</code>进行数值处理，使用<code>argparse</code>来解析命令行参数，使用<code>glob</code>来抓取磁盘上的图像路径，使用cv2进行OpenCV绑定。</p>
+<p>接着我们需要两个命令行参数：–images，指向包含其花图像的目录，–mask，指向包含mask鲜花的目录。这些mask使我们只能专注于我们想要描述的花朵部分(即花瓣)，忽略背景和其他杂乱，否则会扭曲特征向量并插入不需要的噪音。</p>
+<p>更多关于此数据集请参考<a href="http://www.robots.ox.ac.uk/~vgg/data/flowers/17/index.html" target="_blank" rel="noopener">Flowers</a></p>
+<pre><code># grab the image and mask paths 
+imagePaths = sorted(glob.glob(args[&quot;images&quot;] + &quot;\\*.png&quot;))
+maskPaths = sorted(glob.glob(args[&quot;masks&quot;] + &quot;\\*.png&quot;))
+
+# initialize the list of data and class label targets
+data = []
+target = []
+
+# initialize the image descriptor
+desc = RGBHistogram([8,8,8])
+
+# loop over the image and mask paths 
+for (imagePath,maskPath) in zip(imagePaths,maskPaths):
+    # load the image and mask 
+    image = cv2.imread(imagePath)
+    mask = cv2.imread(maskPath)
+    mask = cv2.cvtColor(mask,cv2.COLOR_BGR2GRAY)
+
+    # describe the image 
+    features = desc.describe(image,mask)
+
+    # update the list of data and targets 
+    data.append(features)
+    target.append(imagePath.split(&quot;_&quot;)[-2])
+</code></pre><p>我们使用<code>glob</code>来分别抓住我们的图像和mask的路径。通过传入包含图像的目录，然后是通配符<code>*.png</code>，我们能够快速构建图像路径列表。</p>
+<p>接着，我们简单地初始化数据矩阵和类标签列表(即花的种类)。</p>
+<p>然后实例化我们的图像描述符——每个通道有8个bins的3D RGB颜色直方图。该图像描述符将产生用于表征花的颜色的8×8×8=512维特征向量。</p>
+<p>接着我们开始在我们的图像和mask上循环。我们将图像和mask从磁盘中加载进来，然后在、将mask转换为灰度。</p>
+<p>接着应用我们的3D RGB颜色直方图产生我们的特征向量，然后将其存储在数据矩阵中。</p>
+<p>然后解析花的种类，并更新target列表。</p>
+<p>现在我们可以应用我们的机器学习方法了。</p>
+<pre><code># grab the unique target names and encode the labels 
+targetNames = np.unique(target)
+le = LabelEncoder()
+target = le.fit_transform(target)
+
+# construct the training and testing splits 
+(trainData,testData,trainTarget,testTarget) = train_test_split(data,target,
+        test_size=0.3,random_state = 42)
+
+# train the classifier
+model = RandomForestClassifier(n_estimators=25,random_state=84)
+model.fit(trainData,trainTarget)
+
+# evaluate the classifier 
+print(classification_report(testTarget,model.predict(testData),
+        target_names=targetNames))
+</code></pre><p>首先，我们给我们的类标签进行编码。NumPy的<code>unique</code>方法用于查找唯一的species名称，然后将其输入<code>LabelEncoder</code>。调用<code>fit_transform</code>将“唯一”物种名称“拟合(fits)”为整数，一个species对应于一个category，然后将字符串“转换(transform)”为相应的整数类。target变量现在包含一个整数列表，每个数据点对应一个整数列表，其中每个整数映射到一个花种名称。</p>
+<p>接着，我们开始构建我们的训练和测试集。我们将使用<code>train_test_split</code>函数。我们需要传递我们数据矩阵和target列表，指定测试数据集是整个数据集大小的30％。使用伪随机状态42，以便我们可以在以后的运行中重现我们的结果。</p>
+<p>调用<code>RandomForestClassifier</code>函数，使用森林中的25个决策树进行训练。同样，明确使用伪随机状态，以便我们的结果是可重复的。</p>
+<p>然后使用<code>classification_report</code>函数打印出我们的模型的准确性。我们将实际testing targets作为第一个参数传递，然后让模型预测它认为花种对测试数据的影响。然后，<code>classification_report</code>函数将预测与真实targets进行比较，并为整个系统和每个单独的类别标签打印准确度报告。</p>
+<p>为了进一步研究分类，我们定义了以下代码：</p>
+<pre><code># loop over a sample of the images 
+for i in np.random.choice(np.arange(0,len(imagePaths)),10):
+        # grab the image and mask paths 
+        imagePath = imagePaths[i]
+        maskPath = maskPaths[i]
+
+        # load the image and mask 
+        image = cv2.imread(imagePath)
+        mask = cv2.imread(maskPath)
+        mask = cv2.cvtColor(mask,cv2.COLOR_BGR2GRAY)
+
+        # describe the image 
+        features = desc.describe(image,mask)
+
+        # predict what type of flower the image is 
+        flower = le.inverse_transform(model.predict([features]))[0]
+        print(imagePath)
+        print(&quot;I think this flower is a {}&quot;.format(flower.upper()))
+        cv2.imshow(&quot;image&quot;,image)
+        cv2.waitKey(0)
+</code></pre><p>我们首先从所有图片里面随机挑选10张不同的图像进行调查，然后获取对应的图片和mask的路径。</p>
+<p>然后我们将图片和mask的路径加载进来。并将mask图片转换为灰度图像。</p>
+<p>然后，我们利用<code>describe</code>提取特征向量，以表征花的颜色。</p>
+<p>我们查询我们的随机森林分类器以确定花的种类，然后将其打印到控制台并屏幕上显示。</p>
+<p>最后执行我们的脚本程序：</p>
+<pre><code>python classify.py --image dataset\images --mask dataset\masks
+</code></pre><p>运行结果</p>
+<p><img src="https://i.imgur.com/lMHnTd9.png" alt=""></p>
+<p><img src="https://i.imgur.com/4rQirof.png" alt=""></p>
+<p>完整代码：</p>
+<p>链接：<a href="https://pan.baidu.com/s/12S873RoH_a-02KLYslTqaw" target="_blank" rel="noopener">https://pan.baidu.com/s/12S873RoH_a-02KLYslTqaw</a>  提取码：i53z </p>
+<h3 id="更多的参考："><a href="#更多的参考：" class="headerlink" title="更多的参考："></a>更多的参考：</h3><p><a href="https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_grabcut/py_grabcut.html" target="_blank" rel="noopener">Interactive Foreground Extraction using GrabCut Algorithm</a></p>
+<p><a href="https://ppao.pyimagesearch.com/lessons/case-studies-handwriting-recognition/" target="_blank" rel="noopener">Case Studies – Plant Classification</a></p>
 <hr>
       
     </div>
@@ -546,7 +654,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://0Leo0.github.io/2018/git_2.html" title="git学习之路_2_文件管理">https://0Leo0.github.io/2018/git_2.html</a>
+    <a href="https://0Leo0.github.io/2018/case_study_06.html" title="case study_plant classification">https://0Leo0.github.io/2018/case_study_06.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -562,7 +670,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" <i="" class="fa fa-tag"> git</a>
+            <a href="/tags/case-study/" <i="" class="fa fa-tag"> case study</a>
           
         </div>
       
@@ -575,20 +683,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-	        <a href="/2018/OpenCV_python3_01.html" rel="prev" title="OpenCV_python3_01">
-
-	          <i class="fa fa-chevron-left"></i> OpenCV_python3_01
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
 	      
-	        <a href="/2018/git_1.html" rel="next" title="git学习之路_1_安装git以及创建版本库">
+	        <a href="/2018/case_study_04.html" rel="next" title="case study_eye tracking">
 
-	          git学习之路_1_安装git以及创建版本库 <i class="fa fa-chevron-right"></i>
+	          case study_eye tracking <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -828,7 +931,7 @@ show_date_time();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#时光穿梭"><span class="nav-number">1.</span> <span class="nav-text">时光穿梭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考来源"><span class="nav-number">2.</span> <span class="nav-text">参考来源</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Plant-classification"><span class="nav-number">1.</span> <span class="nav-text">Plant classification</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更多的参考："><span class="nav-number">1.1.</span> <span class="nav-text">更多的参考：</span></a></li></ol></li></ol></div>
             
 
           </div>
