@@ -2,6 +2,195 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://0Leo0.github.io/2018/11/24/OpenCV_python3_14.html</loc>
+    
+    <lastmod>2018-12-03T16:01:32.966Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/23/OpenCV_python3_13.html</loc>
+    
+    <lastmod>2018-12-03T16:01:23.144Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/23/OpenCV_python3_12.html</loc>
+    
+    <lastmod>2018-12-03T16:01:17.969Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/23/OpenCV_python3_11.html</loc>
+    
+    <lastmod>2018-12-03T16:01:11.459Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/22/OpenCV_python3_10.html</loc>
+    
+    <lastmod>2018-12-03T16:01:06.445Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/22/OpenCV_python3_09.html</loc>
+    
+    <lastmod>2018-12-03T16:01:00.674Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/21/OpenCV_python3_08.html</loc>
+    
+    <lastmod>2018-12-03T16:00:54.519Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/21/OpenCV_python3_07.html</loc>
+    
+    <lastmod>2018-12-03T16:00:22.252Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/21/OpenCV_python3_06.html</loc>
+    
+    <lastmod>2018-12-03T15:59:55.169Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/20/OpenCV_python3_05.html</loc>
+    
+    <lastmod>2018-12-03T15:59:46.508Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/08/OpenCV_python3_01.html</loc>
+    
+    <lastmod>2018-12-03T15:59:36.720Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/16/OpenCV_python3_04.html</loc>
+    
+    <lastmod>2018-12-03T15:59:25.483Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/09/OpenCV_python3_03.html</loc>
+    
+    <lastmod>2018-12-03T15:59:20.046Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/09/OpenCV_python3_02.html</loc>
+    
+    <lastmod>2018-12-03T15:59:13.706Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/12/03/%E5%88%9B%E5%BB%BApython%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83.html</loc>
+    
+    <lastmod>2018-12-03T15:58:25.258Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/12/02/python%E7%9A%84%E9%82%A3%E4%BA%9B%E5%B0%8F%E6%8A%80%E5%B7%A7.html</loc>
+    
+    <lastmod>2018-12-03T15:58:05.243Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/12/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html</loc>
+    
+    <lastmod>2018-12-03T15:57:39.469Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/10/26/markdown%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0.html</loc>
+    
+    <lastmod>2018-12-03T15:57:17.007Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/10/29/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86.html</loc>
+    
+    <lastmod>2018-12-03T15:56:49.592Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/10/28/%E5%AE%89%E8%A3%85git%E4%BB%A5%E5%8F%8A%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93.html</loc>
+    
+    <lastmod>2018-12-03T15:56:22.567Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/27/case%20study_webcam%20face%20detection.html</loc>
+    
+    <lastmod>2018-12-03T15:55:44.593Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/29/case%20study_plant%20classification.html</loc>
+    
+    <lastmod>2018-12-03T15:55:20.644Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/27/case%20study_object%20tracking%20in%20video.html</loc>
+    
+    <lastmod>2018-12-03T15:55:00.586Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/28/case%20study_handwriting%20recognition%20with%20hog.html</loc>
+    
+    <lastmod>2018-12-03T15:54:37.081Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/26/case%20study_face%20detection.html</loc>
+    
+    <lastmod>2018-12-03T15:54:13.395Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/28/case%20study_eye%20tracking.html</loc>
+    
+    <lastmod>2018-12-03T15:53:49.102Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://0Leo0.github.io/2018/11/30/case%20study_building%20an%20amazon.com%20cover%20search.html</loc>
+    
+    <lastmod>2018-12-03T15:53:09.505Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://0Leo0.github.io/2018/11/30/C++%E8%B0%83%E7%94%A8python%E5%87%BD%E6%95%B0.html</loc>
     
     <lastmod>2018-12-03T15:46:03.664Z</lastmod>
@@ -16,198 +205,9 @@
   </url>
   
   <url>
-    <loc>https://0Leo0.github.io/2018/normal_04.html</loc>
-    
-    <lastmod>2018-12-03T09:46:12.035Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/normal_03.html</loc>
-    
-    <lastmod>2018-12-03T03:17:28.707Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/normal_02.html</loc>
-    
-    <lastmod>2018-12-02T11:00:27.102Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/case_study_07.html</loc>
-    
-    <lastmod>2018-12-02T03:15:00.007Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/case_study_06.html</loc>
-    
-    <lastmod>2018-11-30T02:35:47.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/case_study_05.html</loc>
-    
-    <lastmod>2018-11-28T11:21:43.561Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/case_study_03.html</loc>
-    
-    <lastmod>2018-11-28T10:12:57.125Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_04.html</loc>
-    
-    <lastmod>2018-11-28T08:20:13.252Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/case_study_04.html</loc>
-    
-    <lastmod>2018-11-28T02:09:48.665Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/case_study_02.html</loc>
-    
-    <lastmod>2018-11-27T04:39:22.830Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/case_study_01.html</loc>
-    
-    <lastmod>2018-11-26T13:11:11.813Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://0Leo0.github.io/2018/case_study_00.html</loc>
     
     <lastmod>2018-11-26T09:36:03.491Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_14.html</loc>
-    
-    <lastmod>2018-11-26T09:21:04.081Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_13.html</loc>
-    
-    <lastmod>2018-11-26T07:18:57.257Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_12.html</loc>
-    
-    <lastmod>2018-11-26T03:33:59.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_11.html</loc>
-    
-    <lastmod>2018-11-25T07:01:53.679Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_10.html</loc>
-    
-    <lastmod>2018-11-23T10:45:05.726Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_09.html</loc>
-    
-    <lastmod>2018-11-22T06:36:33.801Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_08.html</loc>
-    
-    <lastmod>2018-11-22T03:17:21.750Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_07.html</loc>
-    
-    <lastmod>2018-11-21T13:13:22.600Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_06.html</loc>
-    
-    <lastmod>2018-11-21T12:45:07.130Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_05.html</loc>
-    
-    <lastmod>2018-11-21T10:17:52.733Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_03.html</loc>
-    
-    <lastmod>2018-11-09T09:18:55.409Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_02.html</loc>
-    
-    <lastmod>2018-11-09T07:25:12.359Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/OpenCV_python3_01.html</loc>
-    
-    <lastmod>2018-11-09T03:41:18.502Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/git_2.html</loc>
-    
-    <lastmod>2018-11-04T12:26:15.830Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/git_1.html</loc>
-    
-    <lastmod>2018-10-29T04:11:00.393Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://0Leo0.github.io/2018/Markdown%20grammar.html</loc>
-    
-    <lastmod>2018-10-27T17:04:22.290Z</lastmod>
     
   </url>
   

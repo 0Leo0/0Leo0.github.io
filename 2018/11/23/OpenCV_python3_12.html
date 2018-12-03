@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+  
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Opencv,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Lovelife" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="第十二个代码">
+<meta name="keywords" content="Opencv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenCV_python3_12">
+<meta property="og:url" content="https://0Leo0.github.io/2018/11/23/OpenCV_python3_12.html">
+<meta property="og:site_name" content="Lovelife">
+<meta property="og:description" content="第十二个代码">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/eERLUxB.png">
+<meta property="og:image" content="https://i.imgur.com/s9enExH.png">
+<meta property="og:image" content="https://i.imgur.com/Uf5mCQM.png">
+<meta property="og:image" content="https://i.imgur.com/S8lweCt.png">
+<meta property="og:updated_time" content="2018-12-03T16:01:17.969Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OpenCV_python3_12">
+<meta name="twitter:description" content="第十二个代码">
+<meta name="twitter:image" content="https://i.imgur.com/eERLUxB.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://0Leo0.github.io/2018/11/23/OpenCV_python3_12.html">
+
+
+
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "54def903"
+    });
+  daovoice('update');
+  </script>
+
+
+
+
+
+
+  <title>OpenCV_python3_12 | Lovelife</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <meta name="baidu-site-verification" content="6OHnqYQ3xr">
+    <meta name="google-site-verification" content="oaqJVEAC_RyriYZvP1QT3Z2MED8uyqj3RUaLD55dV6c">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lovelife</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">时光荏苒，岁月静好</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tools">
+          <a href="/tools/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            工具
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://0Leo0.github.io/2018/11/23/OpenCV_python3_12.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Leowen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lovelife">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">OpenCV_python3_12</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-23T23:17:50+08:00">
+                2018-11-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/计算机视觉/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机视觉</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.6k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  第十二个代码
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p class="description"></p>
+
+
+<a id="more"></a>
+<h2 id="Practical-Python-and-OpenCV-3rd-Edition-12"><a href="#Practical-Python-and-OpenCV-3rd-Edition-12" class="headerlink" title="Practical Python and OpenCV,3rd Edition 12"></a>Practical Python and OpenCV,3rd Edition 12</h2><hr>
+<h3 id="Thresholding"><a href="#Thresholding" class="headerlink" title="Thresholding"></a>Thresholding</h3><p>阈值处理是图像的二值化。通常，我们寻求将灰度图像转换为二进制图像，其中像素为0或255</p>
+<p>一个简单的阈值处理示例是选择像素值p，然后将小于p的所有像素强度设置为零，并将所有大于p像素值设置为255.这样，我们就能够创建图像的二进制表示。</p>
+<p>通常，我们使用阈值处理来关注图像中特别感兴趣的对象或区域。使用阈值方法，我们将能够在图像中找到硬币。</p>
+<h4 id="simple-thresholding"><a href="#simple-thresholding" class="headerlink" title="simple thresholding"></a>simple thresholding</h4><p>应用简单的阈值方法需要人为干预。我们必须指定阈值T.所有低于T的像素强度都设置为0.并且所有大于T的像素强度都设置为255</p>
+<p>我们还可以通过将低于T的所有像素设置为255并且将所有大于T的像素强度设置为0来应用该二值化的逆。</p>
+<p>新建一个simple_threholding.py文件</p>
+<pre><code>import numpy as np 
+import argparse 
+import cv2 
+
+# Construct the argument parser and parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument(&quot;-i&quot;, &quot;--image&quot;, required = True,
+    help = &quot;Path to the image&quot;)
+args = vars(ap.parse_args())
+
+# Load the image, convert it to grayscale, and blur it slightly
+image = cv2.imread(args[&quot;image&quot;])
+image = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+blurred = cv2.GaussianBlur(image,(5,5),0)
+cv2.imshow(&quot;Image&quot;,image)
+</code></pre><p>我们导入我们的包，解析我们的参数，并加载我们的图像。然后我们将图像从RGB颜色空间转换为灰度。此时，我们应用高斯模糊，σ=5半径。应用高斯模糊有助于消除图像中我们不关心的一些高频边缘。</p>
+<p><img src="https://i.imgur.com/eERLUxB.png" alt=""></p>
+<pre><code>(T,thresh) = cv2.threshold(blurred,155,255,cv2.THRESH_BINARY)
+cv2.imshow(&quot;Threshold Binary&quot;,thresh)
+
+(T,threshInv) = cv2.threshold(blurred,155,255,cv2.THRESH_BINARY_INV)
+cv2.imshow(&quot;Threshold Binary Inverse&quot;,threshInv)
+
+cv2.imshow(&quot;Coins&quot;,cv2.bitwise_and(image,image,mask=threshInv))
+cv2.waitKey(0)
+</code></pre><p>在图像模糊后，我们使用<code>cv2.threshold</code>函数计算阈值图像。 此方法需要四个参数。第一个是我们希望阈值的灰度图像。我们在这里提供模糊图像。</p>
+<p>然后，我们手动提供T阈值。我们使用T=155的值。</p>
+<p>我们的第三个参数是在阈值处理期间应用的最大值。任何大于T的像素强度p都设置为该值。在我们的示例中，任何大于155的像素值都设置为255.任何小于155的值都设置为零。</p>
+<p>最后，我们必须提供一种阈值方法。我们使用cv2.THRESH_BINARY方法，该方法指示大于T的像素值p被设置为最大值（第三个参数）。</p>
+<p><code>cv2.threshold</code>函数返回两个值。第一个是T，我们为阈值手动指定的值。第二个是我们实际的阈值图像。</p>
+<p>然后我们在上面左下中显示我们的阈值图像。我们可以看到我们的硬币现在是黑色像素，白色像素是背景。</p>
+<p>接着，我们使用<code>cv2.THRESH_BINARY_INV</code>作为我们的阈值方法，应用逆阈值而不是正常的阈值。正如我们在上图右下角，我们的硬币现在是白色的，背景是黑色的。</p>
+<p>我们要执行的最后一项任务是显示图像中的硬币并隐藏其他所有内容。</p>
+<p>我们使用<code>cv2.bitwise_and</code>函数执行屏蔽。我们提供原始硬币图像作为前两个参数，然后我们的反转阈值图像作为我们的mask。请记住，mask仅考虑原始图像中mask大于零的像素。由于我们前面反转阈值图像在近似硬币所包含的区域方面做得很好，我们可以使用这个反转阈值图像作为我们的蒙版。</p>
+<p>左上角，显示了应用我们mask的结果——硬币清晰显示，而其余图像被隐藏。</p>
+<h4 id="adaptive-thresholding"><a href="#adaptive-thresholding" class="headerlink" title="adaptive thresholding"></a>adaptive thresholding</h4><p>使用简单阈值法的缺点之一是我们需要手动提供阈值T。寻找一个好的T值不仅需要大量的手动实验和参数调整，如果图像在像素强度方面显示出很多范围，则没有太大帮助。</p>
+<p>为了克服这个问题，我们可以使用自适应阈值处理，它考虑像素的小邻域，然后为每个邻域找到最佳阈值T. 该方法允许我们处理可能存在显着范围的像素强度的情况，并且T的最佳值可以针对图像的不同部分而改变。</p>
+<p>新建一个adaptive_thresholding.py文件</p>
+<pre><code>import numpy as np 
+import argparse
+import cv2 
+
+ap = argparse.ArgumentParser()
+ap.add_argument(&quot;-i&quot;,&quot;--image&quot;,required=True,
+        help=&quot;path to the image&quot;)
+args = vars(ap.parse_args())
+
+# Load the image, convert it to grayscale, and blur it slightly
+image = cv2.imread(args[&quot;image&quot;])
+image = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+blurred = cv2.GaussianBlur(image,(5,5,),0)
+cv2.imshow(&quot;Image&quot;,image)
+
+# In our previous example, we had to use manually specify a
+# pixel value to globally threshold the image. In this example
+# we are going to examine a neighborbood of pixels and adaptively
+# apply thresholding to each neighborbood. In this example, we&apos;ll
+# calculate the mean value of the neighborhood area of 11 pixels
+# and threshold based on that value. Finally, our constant C is
+# subtracted from the mean calculation (in this case 4)
+thresh = cv2.adaptiveThreshold(blurred,255,
+    cv2.ADAPTIVE_THRESH_MEAN_C,cv2.THRESH_BINARY_INV,11,4)
+cv2.imshow(&quot;Mean Thresh&quot;,thresh)
+
+# We can also apply Gaussian thresholding in the same manner
+thresh = cv2.adaptiveThreshold(blurred,255,
+    cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY_INV,15,3)
+cv2.imshow(&quot;Gaussian Thresh&quot;,thresh)
+cv2.waitKey(0)
+</code></pre><p>然后，我们使用<code>cv2.adaptiveThreshold</code>函数对我们的模糊图像应用自适应阈值。我们提供的第一个参数是我们想要阈值的图像。然后，我们提供最大值255，类似于上面提到的简单阈值。</p>
+<p>第三个参数是我们计算当前像素邻域的阈值的方法。 通过提供<code>cv2.ADAPTIVE_THRESH_MEAN_C</code>，我们指出我们想要计算像素邻域的平均值并将其视为我们的T值。</p>
+<p>接下来，我们需要我们的阈值方法。同样，该参数的描述与上述简单的阈值处理方法相同。 我们使用<code>cv2.THRESH_BINARY_INV</code>来指示邻域中任何大于T的像素强度应该设置为255，否则应该设置为0。</p>
+<p>下一个参数是我们的邻域大小。此整数值必须为奇数，表示我们的像素邻域将有多大。我们提供的值为11，表明我们将检查图像的11×11像素区域，而不是像在简单的阈值方法中那样尝试全局阈值图像。</p>
+<p>最后，我们提供一个简单称为C的参数。这个值是一个从均值中减去的整数，允许我们微调我们的阈值。我们在这个例子中使用C=4。</p>
+<p><img src="https://i.imgur.com/s9enExH.png" alt=""></p>
+<p>应用均值加权自适应阈值的结果可以在上图中间图像中看到。</p>
+<p>除了应用标准平均阈值，我们也可以应用高斯(加权平均)阈值处理。但现在我们调整了一些值。我们使用<code>cv2.ADAPTIVE_THRESH_GAUSSIAN_C</code>来表示我们想要使用加权平均值，而不是提供<code>cv2.ADAPTIVE_THRESH_ MEAN_C</code>的值。我们还使用了15×15像素的邻域大小，而不是前面示例中的11×11邻域大小。我们还稍微改变了我们的C值（我们从平均值中减去的值）并使用3而不是4。</p>
+<p>通常，在平均自适应阈值处理和高斯自适应阈值处理之间进行选择需要在您的最终进行一些实验。要改变的最重要的参数是邻域大小和C，您从平均值中减去的值。通过试验此值，您将能够显着更改阈值的结果。</p>
+<h4 id="otsu-and-riddler-calvard"><a href="#otsu-and-riddler-calvard" class="headerlink" title="otsu and riddler-calvard"></a>otsu and riddler-calvard</h4><p>我们可以自动计算T的阈值的另一种方法是使用Otsu的方法。</p>
+<p>Otsu的方法假设图像的灰度直方图中有两个峰值。然后它试图找到一个最佳值来分隔这两个峰值——也就是我们的T值。</p>
+<p>虽然OpenCV为Otsu的方法提供了支持，但我更喜欢Luis Pedro Coelho在mahotas包中的实现，因为它更像是Pythonic。</p>
+<p>新建一个otsu_and_riddler.py文件</p>
+<pre><code>from __future__ import print_function
+import numpy as np 
+import argparse
+import mahotas
+import cv2 
+
+ap = argparse.ArgumentParser()
+ap.add_argument(&quot;-i&quot;,&quot;--image&quot;,required=True,
+    help=&quot;path to the image&quot;)
+args = vars(ap.parse_args())
+
+image = cv2.imread(args[&quot;image&quot;])
+image = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+blurred = cv2.GaussianBlur(image,(5,5),0)
+cv2.imshow(&quot;Image&quot;,image)
+
+# OpenCV provides methods to use Otsu&apos;s thresholding, but I find
+# the mahotas implementation is more &apos;Pythonic&apos;. Otsu&apos;s method
+# assumes that are two &apos;peaks&apos; in the grayscale histogram. It finds
+# these peaks, and then returns a value we should threshold on.
+T = mahotas.thresholding.otsu(blurred)
+print(&quot;Otsu&apos;s threshold:{}&quot;.format(T))
+</code></pre><p>我们这里引入了mahotas，另一个图像处理包。然后处理我们解析参数和加载图像的标准做法。</p>
+<p>为了计算T的最佳值，我们在<code>mahotas.thresholding</code>包中使用otsu函数。 正如我们的输出稍后将向我们展示的那样，Otsu的方法找到了我们将用于阈值处理的T=137的值。</p>
+<pre><code># Applying the threshold can be done using NumPy, where values
+# smaller than the threshold are set to zero, and values above
+# the threshold are set to 255 (white).
+thresh = image.copy()
+thresh[thresh &gt; T] = 255
+thresh[thresh &lt; 255] = 0
+thresh = cv2.bitwise_not(thresh)
+cv2.imshow(&quot;Otsu&quot;,thresh)
+
+# An alternative is to use the Riddler-Calvard method
+T = mahotas.thresholding.rc(blurred)
+print(&quot;Riddler-Calvard:{}&quot;.format(T))
+thresh = image.copy()
+thresh[thresh &gt; T] = 255
+thresh[thresh &lt; 255] = 0
+thresh = cv2.bitwise_not(thresh)
+cv2.imshow(&quot;Riddler-Calvard&quot;,thresh)
+cv2.waitKey(0)
+</code></pre><p>应用阈值处理。首先，我们制作灰度图像的副本，以便我们有图像进行阈值。 然后，使任何值大于T的值都是white，接着将剩下的所有非白色的像素转换为黑色像素。然后我们使用<code>cv2.bitwise_not</code>来反转我们的阈值。这相当于应用<code>cv2.THRESH_BINARY_INV</code>阈值类型，如本章前面的例子。</p>
+<p>Otsu方法的结果可以在下图的中间图像中看到。 我们可以清楚地看到图像中的硬币已经突出显示。</p>
+<p>在找到T的最佳值时要记住的另一种方法是<code>Riddler-Calvard</code>方法。就像在Otsu的方法中一样，<code>Riddler-Calvard</code>方法也为T计算最佳值137.我们使用<code>mahotas.thresholding</code>中的<code>rc</code>函数应用此方法。如前面的例子中所示。鉴于<code>Otsu</code>和<code>Riddler-Calvard</code>的T值相同，下图右图中的阈值图像与中间的阈值图像相同。</p>
+<p><img src="https://i.imgur.com/Uf5mCQM.png" alt=""></p>
+<p><img src="https://i.imgur.com/S8lweCt.png" alt=""></p>
+<p><strong>用到的函数</strong></p>
+<p><span id="inline-blue">cv2.threshold</span></p>
+<p><span id="inline-blue">cv2.THRESH_BINARY</span></p>
+<p><span id="inline-blue">cv2.adaptiveThreshold</span></p>
+<p><span id="inline-blue">cv2.THRESH_BINARY_INV</span></p>
+<p><span id="inline-blue"></span></p>
+<h3 id="更多的参考："><a href="#更多的参考：" class="headerlink" title="更多的参考："></a>更多的参考：</h3><p><a href="https://ppao.pyimagesearch.com/lessons/ppao-chapter-9-thresholding/" target="_blank" rel="noopener">PPaO Chapter 9 – Thresholding</a></p>
+<p><a href="https://www.pyimagesearch.com/2014/09/08/thresholding-simple-image-segmentation-using-opencv/" target="_blank" rel="noopener">Thresholding: Simple Image Segmentation using OpenCV</a></p>
+<p><a href="https://www.pyimagesearch.com/2015/11/02/watershed-opencv/" target="_blank" rel="noopener">Watershed OpenCV</a></p>
+<hr>
+      
+    </div>
+    
+    
+    
+
+
+
+<div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
+
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>支持一下</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Leowen 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Leowen
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://0Leo0.github.io/2018/11/23/OpenCV_python3_12.html" title="OpenCV_python3_12">https://0Leo0.github.io/2018/11/23/OpenCV_python3_12.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Opencv/" <i="" class="fa fa-tag"> Opencv</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+	        <a href="/2018/11/23/OpenCV_python3_13.html" rel="prev" title="OpenCV_python3_13">
+
+	          <i class="fa fa-chevron-left"></i> OpenCV_python3_13
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+	      
+	        <a href="/2018/11/23/OpenCV_python3_11.html" rel="next" title="OpenCV_python3_11">
+
+	          OpenCV_python3_11 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bd1365ee94f5fde" async="async"></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDUyMS8xNzA0OA=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+<a href="/">
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="Leowen">
+</a>
+            
+              <p class="site-author-name" itemprop="name">Leowen</p>
+              <p class="site-description motion-element" itemprop="description">人生苦短，我用python</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/0Leo0/0Leo0.github.io" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.toutiao.com/c/user/19419672292/#mid=1587399135536142" target="_blank" title="头条">
+                      
+                        <i class="fa fa-fw fa-instagram"></i>头条</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/sinat_26545113" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-stack-overflow"></i>CSDN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.toutiao.com/i6504797037244973582/" title="电脑中好用的软件一" target="_blank">电脑中好用的软件一</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.toutiao.com/i6505923967876858375/" title="电脑中好用的软件二" target="_blank">电脑中好用的软件二</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.toutiao.com/i6506353532470297096/" title="电脑中好用的软件三" target="_blank">电脑中好用的软件三</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.toutiao.com/i6615131581331800583/" title="电脑中好用的软件四" target="_blank">电脑中好用的软件四</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+        </div>
+
+﻿<!-- 这是注释符号-->
+<div id="days"></div>
+    <script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("10/25/2018 12:00:56");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+    }
+function setzero(i){
+    if (i<10)
+    {i="0" + i};
+    return i;
+}
+show_date_time();
+</script>
+
+
+<div id="music163player">
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="110" src="//music.163.com/outchain/player?type=0&id=2485892847&auto=1&height=90"></iframe>
+
+</div>
+
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Practical-Python-and-OpenCV-3rd-Edition-12"><span class="nav-number">1.</span> <span class="nav-text">Practical Python and OpenCV,3rd Edition 12</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Thresholding"><span class="nav-number">1.1.</span> <span class="nav-text">Thresholding</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#simple-thresholding"><span class="nav-number">1.1.1.</span> <span class="nav-text">simple thresholding</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#adaptive-thresholding"><span class="nav-number">1.1.2.</span> <span class="nav-text">adaptive thresholding</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#otsu-and-riddler-calvard"><span class="nav-number">1.1.3.</span> <span class="nav-text">otsu and riddler-calvard</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更多的参考："><span class="nav-number">1.2.</span> <span class="nav-text">更多的参考：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        ﻿<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+
+
+  <span class="author" itemprop="copyrightHolder">Leowen</span>
+
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+  
+</div>
+
+
+
+
+  <div class="powered-by"> 个人专属</div>
+
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+  <div class="theme-info">文钧的博客 </div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+
+
+
+
+<div class="theme-info">
+<div class="powered-by"></div>
+<span class="post-count">博客全站共47.9k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+
+
+
+<a href="https://github.com/0Leo0/0Leo0.github.io"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+
+
+
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/js/src/dytitle.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>;
+  <script>
+  $("body").backstretch("https://s1.ax1x.com/2018/10/25/iyARbT.jpg");
+  </script>
+
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bd1365ee94f5fde"></script>
+
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"left","width":80,"height":160},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>
