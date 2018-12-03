@@ -39,6 +39,28 @@
   </entry>
   
   <entry>
+    <title>Dockers for windows</title>
+    <link href="https://0Leo0.github.io//2018/normal_05.html"/>
+    <id>https://0Leo0.github.io//2018/normal_05.html</id>
+    <published>2018-12-03T04:17:50.000Z</published>
+    <updated>2018-12-03T13:53:52.090Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p class="description"></p><a id="more"></a><h3 id="Dockers-for-windows"><a href="#Dockers-for-windows" class="headerlink" title="Dockers for windows"></a>Dockers for windows</h3><hr><h4 id="安装dockers"><a href="#安装dockers" class="headerlink" title="安装dockers"></a>安装dockers</h4><p>Docker是一种容器技术，可以将应用和环境等进行打包，形成一个独立的、类似于iOS的App形式的“应用”。这个应用可以直接被分发到任意一个支持Docker的环境中，通过简单的命令即可启动运行。Docker是一种最流行的容器化实现方案，和虚拟化技术类似，它极大地方便了应用服务的部署；又与虚拟化技术不同，它以一种更轻量的方式实现了应用服务的打包。使用Docker，可以让每个应用彼此相互隔离，在同一台机器上同时运行多个应用，不过它们彼此之间共享同一个操作系统。Docker的优势在于，它可以在更细的粒度上进行资源管理，也比虚拟化技术更加节约资源。</p><p>如果你的系统是Windows 10 64位，那么推荐使用Docker for Windows。此时直接从Docker官方网站下载最新的Docker for Windows 安装包即可： </p><p><a href="https://docs.docker.com/docker-for-windows/install/" target="_blank" rel="noopener">Docker for windows</a></p><p>如果不是Windows 10 64位系统，则可以下载Docker Toolbox：</p><p><a href="https://docs.docker.com/toolbox/toolbox_install_windows/" target="_blank" rel="noopener">Docker Toolbox</a></p><p>不推荐使用 docker toolbox，建议使用新的 docker for mac 及 docker for windows </p><p>需要注意的是，Windows上安装Docker对系统有以下的要求：</p><ul><li>需要支持Hyper-V的windows版本，Hyper-V目前仅在Windows 10之后的版本支持</li></ul><p><img src="https://i.imgur.com/zMpwRpe.png" alt=""></p><ul><li>BIOS里需要启用Virtualization（虚拟化）</li></ul><p>安装完成之后，运行我们的dockers。</p><p>测试安装的docker，在docker终端输入命令：</p><pre><code>C:\Users\Leowen&gt;docker --versionDocker version 18.03.1-ce, build 9ee9f40</code></pre><p>安装好Docker之后，为了为了提高镜像的下载速度，我们使用国内镜像来加速下载，于是就有了Docker加速器一说。</p><p>推荐的Docker加速器有DaoCloud（详见<a href="https://www.daocloud.io/mirror" target="_blank" rel="noopener">https://www.daocloud.io/mirror</a>）和阿里云（详见<a href="https://cr.console.aliyun.com/#/accelerator" target="_blank" rel="noopener">https://cr.console.aliyun.com/#/accelerator</a>）</p><p>不同平台的镜像加速方法配置可以参考DaoCloud的官方文档：<br><a href="http://guide.daocloud.io/dcs/daocloud-9153151.html" target="_blank" rel="noopener">http://guide.daocloud.io/dcs/daocloud-9153151.html</a></p><p>以 Docker for windows为例，点击加速器</p><p><img src="https://i.imgur.com/zofx70X.png" alt=""></p><p>然后获取Windows加速器地址</p><p><img src="https://i.imgur.com/mF10qcV.png" alt=""></p><p>配置dockers for Windows</p><p><img src="https://i.imgur.com/VSg5OYa.png" alt=""></p><p>接下来，下载我们需要的镜像。</p><p><img src="https://i.imgur.com/w8T9BiK.png" alt=""></p><p><img src="https://i.imgur.com/lqMO4L8.png" alt=""></p><h3 id="更多的参考："><a href="#更多的参考：" class="headerlink" title="更多的参考："></a>更多的参考：</h3><p><a href="https://docs.docker.com/engine/reference/commandline/docker/" target="_blank" rel="noopener">Dockers command</a></p><p><a href="https://hub.docker.com" target="_blank" rel="noopener">注册dockers</a></p><p><a href="https://www.toutiao.com/a6630653622684221959/" target="_blank" rel="noopener">Windows上做Python开发太痛苦？Docker了解一下！</a></p><hr>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p class=&quot;description&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="平时" scheme="https://0Leo0.github.io/categories/%E5%B9%B3%E6%97%B6/"/>
+    
+    
+      <category term="python" scheme="https://0Leo0.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python的那些小技巧</title>
     <link href="https://0Leo0.github.io//2018/normal_02.html"/>
     <id>https://0Leo0.github.io//2018/normal_02.html</id>
@@ -84,10 +106,10 @@
   
   <entry>
     <title>C++调用python函数</title>
-    <link href="https://0Leo0.github.io//2018/normal.html"/>
-    <id>https://0Leo0.github.io//2018/normal.html</id>
+    <link href="https://0Leo0.github.io//2018/11/30/C++%E8%B0%83%E7%94%A8python%E5%87%BD%E6%95%B0.html"/>
+    <id>https://0Leo0.github.io//2018/11/30/C++调用python函数.html</id>
     <published>2018-11-30T04:17:50.000Z</published>
-    <updated>2018-11-30T08:05:10.937Z</updated>
+    <updated>2018-12-03T15:46:03.664Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p class="description"></p><a id="more"></a><h2 id="C-调用python函数-cr2转jpg"><a href="#C-调用python函数-cr2转jpg" class="headerlink" title="C++调用python函数(cr2转jpg)"></a>C++调用python函数(cr2转jpg)</h2><hr><p>最近帮朋友处理一个.CR2图片格式转jpg。因为他是用C++编程的，所以会涉及到C++调用python函数，下面给大家分享一下过程。</p><p>首先我们写一个CR2CVTJPG.py的文件</p><pre><code>import numpy as npfrom PIL import Imagefrom rawkit.raw import Rawfrom rawkit.options import WhiteBalanceimport os.path import globdef cr2cvtjpg():  basepath = os.path.dirname(os.path.abspath(r&apos;C:\Users\Leowen\Anaconda3\Lib\site-packages\LibRaw-0.18.13\bin\libraw.dll&apos;))  os.environ[&apos;PATH&apos;] = basepath +os.pathsep + os.environ[&apos;PATH&apos;]  # 获取图片  imagePaths = glob.glob(&quot;C:\\Users\\Leowen\\Desktop\\image&quot;+&quot;\\*.CR2&quot;)  # 循环处理单个图片  for (i,imagePath) in enumerate(imagePaths):    with Raw(filename=imagePath) as raw:      raw.options.white_balance = WhiteBalance(camera=False, auto=True)      outputpath = &quot;C:\\Users\\Leowen\\Desktop\\&quot; +str(i) + &quot;.ppm&quot;      raw.save(filename=outputpath)    img = Image.open(outputpath)    jpgoutputpath = &quot;C:\\Users\\Leowen\\Desktop\\&quot; +str(i) + &quot;.jpg&quot;    img.save(jpgoutputpath)</code></pre><p>这个python程序就不解释了，这是python的知识，我们这里主要将C++调用python函数。</p><p>我用anaconda3安装的python36。VS编辑器用的是VS2015.</p><p>首先我们新建一个项目</p><p><img src="https://i.imgur.com/e9kxffW.png" alt=""></p><p>然后新建一个main.cpp文件。在我们属性管理器中，修改我们的项目的解决方案平台x64。</p><p>main.cpp内容为：</p><pre><code>#include &lt;Python.h&gt; #include &lt;iostream&gt;int main(int argc, char* argv[]){ // init python    Py_SetPythonHome(L&quot;C:\\Users\\Leowen\\Anaconda3&quot;);    Py_Initialize();    if (!Py_IsInitialized())        return -1;    const char *scriptDirectoryName = &quot;C:\\Users\\Leowen\\Desktop\\20181130test\\ConsoleApplication1\\ConsoleApplication1&quot;;    Py_Initialize();    PyObject *sysPath = PySys_GetObject(&quot;path&quot;);    PyObject *path = PyUnicode_FromString(scriptDirectoryName);    int result = PyList_Insert(sysPath, 0, path);    PyObject *pModule = PyImport_ImportModule(&quot;CR2CVTJPG&quot;);    // load python script     if (!pModule)    {        std::cout &lt;&lt; &quot;can&apos;t find CR2CVTJPG.py&quot; &lt;&lt; std::endl;        return -1;    }    //     PyObject* pDict = PyModule_GetDict(pModule);    if (!pDict) { return -1; }    // get &quot;add&quot; function     PyObject* pFunc = PyDict_GetItemString(pDict, &quot;cr2cvtjpg&quot;);    if (!pFunc || !PyCallable_Check(pFunc))    {        std::cout &lt;&lt; &quot;can&apos;t find function [cr2cvtjpg]&quot; &lt;&lt; std::endl;        return -1;    }    // parameter     //PyObject *pArgs = PyTuple_New(2);  //两个参数    //PyTuple_SetItem(pArgs, 0, Py_BuildValue(&quot;l&quot;, 3));    //PyTuple_SetItem(pArgs, 1, Py_BuildValue(&quot;l&quot;, 4));    // call python script     //PyObject_CallObject(pFunc, pArgs);//调用函数    PyObject_CallObject(pFunc,NULL);//调用函数    //     //Py_DECREF(pName);    //Py_DECREF(pArgs);//打印调用信息    Py_DECREF(pModule);    // close python     Py_Finalize();    return 0;}</code></pre><p><img src="https://i.imgur.com/eflYlP0.png" alt=""></p><p>接着我们配置项目属性</p><p>将python的头文件(比如C:\Users\Leowen\Anaconda3\include)添加到， 项目属性页-&gt;VC++目录-&gt; 包含目录。</p><p>将python.lib文件(比如C:\Users\Leowen\Anaconda3\libs)添加到，配置-&gt;链接器-&gt;输入-&gt;附加依赖项。</p><p><img src="https://i.imgur.com/IVwpv9a.png" alt=""></p><p>接下来修改pyconfig.h文件。</p><p>找到C:\Users\Leowen\Anaconda3\include\pyconfig.h文件，打开文件，搜索python36_d.lib，将</p><pre><code>#           if defined(_DEBUG)#               pragma comment(lib,&quot;python36_d.lib&quot;)</code></pre><p>修改为：</p><pre><code>#           if defined(_DEBUG)#               pragma comment(lib,&quot;python36.lib&quot;)</code></pre><p>再搜索Py_DEBUG，将</p><pre><code>#ifdef _DEBUG#   define Py_DEBUG#endif</code></pre><p>修改为：</p><pre><code>#ifdef _DEBUG//# define Py_DEBUG#endif</code></pre><p>接下来，将我们的python脚本拷贝到我们项目文件中</p><p><img src="https://i.imgur.com/5y4sGoR.png" alt=""></p><p>生成解决方案：</p><p><img src="https://i.imgur.com/7kmFdFY.png" alt=""></p><p>运行结果</p><p><img src="https://i.imgur.com/eqBskR8.png" alt=""></p><h3 id="更多的参考："><a href="#更多的参考：" class="headerlink" title="更多的参考："></a>更多的参考：</h3><p><a href="https://www.jianshu.com/p/75c986544bd1" target="_blank" rel="noopener">VS2015 C++调用Python3.5环境搭建</a></p><p><a href="https://baike.xsoftlab.net/view/657.html" target="_blank" rel="noopener">从C调用Python脚本unableto load the file system codec ImportError</a></p><hr>]]></content>
     
@@ -424,28 +446,6 @@
     <summary type="html">
     
       第八个代码
-    
-    </summary>
-    
-      <category term="计算机视觉" scheme="https://0Leo0.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
-    
-    
-      <category term="Opencv" scheme="https://0Leo0.github.io/tags/Opencv/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenCV_python3_07</title>
-    <link href="https://0Leo0.github.io//2018/OpenCV_python3_07.html"/>
-    <id>https://0Leo0.github.io//2018/OpenCV_python3_07.html</id>
-    <published>2018-11-21T12:17:50.000Z</published>
-    <updated>2018-11-21T13:13:22.600Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p class="description"></p><a id="more"></a><h2 id="Practical-Python-and-OpenCV-3rd-Edition-07"><a href="#Practical-Python-and-OpenCV-3rd-Edition-07" class="headerlink" title="Practical Python and OpenCV,3rd Edition 07"></a>Practical Python and OpenCV,3rd Edition 07</h2><hr><h3 id="MASKING"><a href="#MASKING" class="headerlink" title="MASKING"></a>MASKING</h3><p>接下来我们看一下masking technique。</p><p>使用mask可以让我们只关注我们感兴趣的图像部分。</p><p>例如，假设我们正在建立一个识别面部的计算机视觉系统。我们有兴趣查找和描述的图像的唯一部分是包含面部的图像部分——我们根本不关心图像的其余内容。如果我们可以在图像中找到面部，我们可以构造一个mask来仅显示图像中的面部。</p><p>新建一个masking.py</p><pre><code># Import the necessary packagesimport numpy as npimport argparseimport cv2# Construct the argument parser and parse the argumentsap = argparse.ArgumentParser()ap.add_argument(&quot;-i&quot;, &quot;--image&quot;, required = True,    help = &quot;Path to the image&quot;)args = vars(ap.parse_args())# Load the image and show itimage = cv2.imread(args[&quot;image&quot;])cv2.imshow(&quot;Original&quot;, image)</code></pre><p>上面读取并显示原始图片，接下来我们构造一个NumPy数组，填充零，与我们的图像具有相同的宽度和高度。为了绘制白色矩形，我们首先通过划分宽度和高度来计算图像的中心，使用//运算符表示整数除法。最后，我们使用cv2.rectangle函数画出白色矩形。</p><pre><code># Masking allows us to focus only on parts of an image that# interest us. A mask is the same size as our image, but has# only two pixel values, 0 and 255. Pixels with a value of 0# are ignored in the orignal image, and mask pixels with a# value of 255 are allowed to be kept. For example, let&apos;s# construct a mask with a 150x150 square at the center of it# and mask our image.mask = np.zeros(image.shape[:2], dtype = &quot;uint8&quot;)(cX, cY) = (image.shape[1] // 2, image.shape[0] // 2)cv2.rectangle(mask, (cX - 75, cY - 75), (cX + 75 , cY + 75), 255, -1)cv2.imshow(&quot;Mask&quot;, mask)</code></pre><p>我们使用cv2.bitwise_and函数应用我们的mask。前两个参数是图像本身。显然，对于图像中的所有像素，AND功能将为True。但是，此函数的重要部分是mask关键字参数。通过提供mask，cv2.bitwise_and函数仅检查mask中“on”的像素。在这种情况下，只有矩形白色区域是显示出来的。</p><pre><code># Apply out mask -- notice how only the center rectangular# region of the pill is shownmasked = cv2.bitwise_and(image, image, mask = mask)cv2.imshow(&quot;Mask Applied to Image&quot;, masked)cv2.waitKey(0)</code></pre><p>接下来，我们重新初始化我们的蒙版，用零填充与图像相同的尺寸。然后，我们在mask image上绘制一个白色圆圈，从图像的中心开始，半径为100像素。然后再次使用cv2.bitwise_and函数应用圆形mask。</p><pre><code># Now, let&apos;s make a circular mask with a radius of 100 pixelsmask = np.zeros(image.shape[:2],dtype=&quot;uint8&quot;)cv2.circle(mask,(cX,cY),100,255,-1)masked = cv2.bitwise_and(image,image,mask=mask)cv2.imshow(&quot;Mask&quot;,mask)cv2.imshow(&quot;Mask Applied to Image&quot;,masked)cv2.waitKey(0)</code></pre><p>显示效果：</p><p><img src="https://i.imgur.com/UHw8Qzh.png" alt=""></p><p><img src="https://i.imgur.com/cQwpOEx.png" alt=""></p><p><strong>用到的函数</strong></p><p><span id="inline-blue">cv2.bitwise_and</span></p><p><span id="inline-blue">cv2.ractangle</span></p><p><span id="inline-blue">cv2.circle</span></p><h3 id="更多的参考："><a href="#更多的参考：" class="headerlink" title="更多的参考："></a>更多的参考：</h3><p><a href="https://ppao.pyimagesearch.com/lessons/ppao-chapter-6-image-processing/" target="_blank" rel="noopener">PPaO Chapter 6 – Image Processing</a></p><hr>]]></content>
-    
-    <summary type="html">
-    
-      第七个代码
     
     </summary>
     
